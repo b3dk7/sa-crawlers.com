@@ -1,0 +1,1744 @@
+<!--https://securelist.com/blog/incidents/78351/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/-->
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie ie8"  prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if gte IE 9]>
+<html class="ie ie11"  prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html  prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="author" href="https://plus.google.com/u/0/101239979599494298420/"/>
+<link rel="publisher" href="https://plus.google.com/u/0/101239979599494298420/"/>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://securelist.com/xmlrpc.php" />
+<link rel="shortcut icon" href="https://cdn.securelist.com/wp-content/themes/securelist/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://cdn.securelist.com/wp-content/themes/securelist/images/favicon.ico" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="http://securelist.com" />
+<link rel="alternate" hreflang="ru" href="http://securelist.ru" />
+<link rel="alternate" hreflang="de" href="http://www.viruslist.com/de/" />
+<link rel="alternate" hreflang="fr" href="http://www.viruslist.com/fr/" />
+<link rel="alternate" hreflang="sp" href="http://www.viruslist.com/sp/" />
+<link rel="alternate" hreflang="pl" href="http://securelist.pl/?VLredirect=1" />
+<!--[if lt IE 9]>
+<script src="https://cdn.securelist.com/wp-content/themes/securelist/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<title>WannaCry ransomware used in widespread attacks all over the world - Securelist</title>
+<!-- JM Twitter Cards by Julien Maury 7.6.0 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@Securelist">
+<meta name="twitter:site" content="@Securelist">
+<meta name="twitter:title" content="WannaCry ransomware used in widespread attacks all over the world">
+<meta name="twitter:description" content="Earlier today, our products detected and successfully blocked a large number of ransomware attacks around the world. In these attacks, data is encrypted with the extension “.WCRY” added to the filenames. Our analysis indicates the attack, dubbed “WannaCry”, is initiated through an SMBv2 remote code execution in Microsoft Windows.">
+<meta name="twitter:image" content="https://cdn.securelist.com/files/2016/06/ransom_1416_pr.png">
+<!-- /JM Twitter Cards by Julien Maury 7.6.0 -->
+
+<!-- All in One SEO Pack 2.3.14.1 by Michael Torbert of Semper Fi Web Design[1596,1739] -->
+<meta name="description"  content="Earlier today, our products detected and successfully blocked a large number of ransomware attacks around the world. In these attacks, data is encrypted with" />
+
+<meta name="keywords"  content="ransomware,vulnerabilities and exploits,encryption,malware descriptions,wannacry" />
+
+<link rel="canonical" href="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Securelist - Information about Viruses, Hackers and Spam &raquo; Feed" href="https://securelist.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Securelist - Information about Viruses, Hackers and Spam &raquo; Comments Feed" href="https://securelist.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Securelist - Information about Viruses, Hackers and Spam &raquo; WannaCry ransomware used in widespread attacks all over the world Comments Feed" href="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/feed/" />
+<link rel='stylesheet' id='crayon-group-css' href='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css,wp-content/plugins/jquery-collapse-o-matic/light_style.css,wp-content/plugins/wds-securelist-widgets/css/securelist-plugin-styles.css,wp-content/plugins/honeypot-comments/public/assets/css/public.css,wp-content/plugins/kspr_twitter_pullquote/css/style.css,wp-content/themes/securelist/css/fonts-lat.css,wp-content/themes/securelist/style.css,wp-content/themes/securelist/css/responsive.css,wp-content/themes/securelist/css/plugins.css,wp-content/plugins/kaspersky-social-sharing/assets/css/style.css&#038;ver=1492409688' type='text/css' media='all' />
+<link rel='stylesheet' id='taxonomy-image-plugin-public-group-css' href='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/taxonomy-images/css/style.css&#038;ver=1492409688' type='text/css' media='screen' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='securelist-ie-group-css' href='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/securelist/css/ie.css&#038;ver=1492409688' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='kss_custom_css-group-css' href='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/kaspersky-social-sharing/assets/css/custom.css&#038;ver=1492409688' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdn.securelist.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var kss = {"twitter_account":"Securelist"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/honeypot-comments/public/assets/js/public.js,wp-content/plugins/kspr_twitter_pullquote/js/kaspersky-twitter-pullquote.js,wp-content/plugins/kaspersky-social-sharing/assets/js/social-share.js&#038;ver=1492409688'></script>
+<link rel='https://api.w.org/' href='https://securelist.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://securelist.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cdn.securelist.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='DDOS attacks in Q1 2017' href='https://securelist.com/ddos-attacks-in-q1-2017/78285/' />
+<link rel='next' title='BSides Denver 2017' href='https://securelist.com/bsides-denver-2017/78375/' />
+<link rel='shortlink' href='https://securelist.com/?p=78351' />
+<link rel="alternate" type="application/json+oembed" href="https://securelist.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsecurelist.com%2Fwannacry-ransomware-used-in-widespread-attacks-all-over-the-world%2F78351%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://securelist.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsecurelist.com%2Fwannacry-ransomware-used-in-widespread-attacks-all-over-the-world%2F78351%2F&#038;format=xml" />
+<script src='https://kasperskycontenthub.com/?dm=ed1f9e435dc885292eab65620c51f3fb&amp;action=load&amp;blogid=43&amp;siteid=1&amp;t=462291389&amp;back=https%3A%2F%2Fsecurelist.com%2Fwannacry-ransomware-used-in-widespread-attacks-all-over-the-world%2F78351%2F' type='text/javascript'></script><script type="text/javascript">
+document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>Munchkin.init('802-IJN-240');</script>
+<script src="//cdn.optimizely.com/js/3431070370.js"></script>
+
+<!-- Facebook Conversion Code for https://securelist.com/ -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6037454831409', {'value':'0.00','currency':'RUB'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6037454831409&cd[value]=0.00&cd[currency]=RUB&noscript=1" /></noscript><!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '839281392784015');
+	fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=839281392784015&amp;ev=PageView&amp;noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+                    <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-15857463-1', 'auto');
+                ga('set', 'anonymizeIp', true);
+                
+                                
+                    
+                                            
+                        ga('send', 'pageview', {
+                                                            'dimension1' : 'GReAT',
+                                                            'dimension2' : '78351',
+                                                            'dimension3' : '2017-05-12',
+                                                            'dimension4' : 'Featured, Incidents',
+                                                            'dimension5' : 'Encryption, Malware Descriptions, Ransomware, Vulnerabilities and exploits, WannaCry',
+                                                    });
+
+                        
+                                                        
+                            
+                        
+                                                        
+                            
+                                            
+                                    
+                
+            </script>
+            
+<script>
+var _prum = [['id', '560b0cc5abe53daf128a2dfc'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<!-- Open Graph Meta Data by WP-Open-Graph plugin-->
+<meta property="og:site_name" content="Securelist - Information about Viruses, Hackers and Spam" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="WannaCry ransomware used in widespread attacks all over the world" />
+<meta property="og:url" content="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/" />
+<meta property="og:description" content="Earlier today, our products detected and successfully blocked a large number of ransomware attacks around the world. In these attacks, data is encrypted with the extension “.WCRY” added to the filenames. Our analysis indicates the attack, dubbed “WannaCry”, is initiated through an SMBv2 remote code execution in Microsoft Windows." />
+<meta property="og:image" content="https://cdn.securelist.com/files/2016/06/ransom_1416_pr.png" />
+<!-- /Open Graph Meta Data -->
+	<div id="fb-root"></div>
+	<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=160639043985664";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script>(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='//apis.google.com/js/platform.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+	<link rel="icon" href="https://cdn.securelist.com/wp-content/themes/securelist/images/site-icon.png" sizes="32x32" />
+<link rel="icon" href="https://cdn.securelist.com/wp-content/themes/securelist/images/site-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://cdn.securelist.com/wp-content/themes/securelist/images/site-icon.png" />
+<meta name="msapplication-TileImage" content="https://cdn.securelist.com/wp-content/themes/securelist/images/site-icon.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-78351 single-format-standard en_US site-loading custom-font sidebar category-featured category-incidents ms-43" itemscope itemtype="http://schema.org/WebPage">
+	<div id="page" class="site">
+		<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+
+			<div class="header-col-4 right">
+				<div class="header-search-form-wrap">
+					<div class="header-search-button-wrap">
+						<div class="header-search-button"></div>
+					</div>
+					<div class="header-search-form">
+						<form role="search" class="searchform" action="https://securelist.com" method="get">
+    <fieldset>
+        <input type="text" name="s" class="search" value="Search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+        <input type="submit" class="form-button" alt="Search" />
+            </fieldset>
+</form>
+					</div>
+				</div>
+			</div><!--  .header-col-4 -->
+
+			<div class="header-col-1 left">
+												<a class="home-link" href="https://securelist.com/" title="Securelist - Information about Viruses, Hackers and Spam" rel="home">
+						<h1 class="site-title">Securelist &#8211; Information about Viruses, Hackers and Spam</h1>
+					</a>
+							</div><!-- .header-col-1 -->
+
+			<div class="header-col-2 left ">
+
+				<div class="inside-col-1 left">
+					&nbsp;
+					
+				</div><!-- .inside-col-1 -->
+
+				<div class="inside-col-2 left">
+											<span class="ico-person left"></span><span class="cp-text cp-text-login uppercase">Log in</span><img src="https://cdn.securelist.com/wp-content/themes/securelist/images/ico-arrow-sm.png" vspace="3" />
+						
+
+
+	<div class="header-login">
+		<div class="header-login-row-1">
+			<h6 class="uppercase">Log In</h6>
+			
+		<form name="loginform" id="loginform" action="https://securelist.com/wp-login.php?wpe-login=kasperskyhub" method="post">
+			
+			<p class="login-username">
+				<label for="user_login"></label>
+				<input type="text" name="log" id="user_login" class="input" value="" size="20" />
+			</p>
+			<p class="login-password">
+				<label for="user_pass"></label>
+				<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" />
+			</p>
+			
+			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Keep me logged in</label></p>
+			<p class="login-submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />
+				<input type="hidden" name="redirect_to" value="https://securelist.com" />
+			</p>
+			
+		</form>		</div><!-- .header-login-row-1 -->
+
+		<div class="header-login-row-2">
+
+			<!--div class="header-login-col-3 left">
+				<h6 class="uppercase">Register an account</h6>
+				<span class="login-register-description">Its easy to register for one.</span>
+			</div>
+
+			<div class="header-login-col-4 left">
+				<a href="https://securelist.com/register"><span class="register-button"></span></a>
+			</div-->
+
+		</div><!-- .header-login-row-2 -->
+	</div><!-- .header-login -->
+
+									</div><!-- inside-col-2 -->
+
+				<div class="inside-col-3 left">
+					<span class="ico-globe left"></span><span class="cp-text cp-text-language uppercase">English</span>
+						<ul class="header-language">
+							<li class="language"><a href="https://securelist.com" rel="alternate" hreflang="en">English</a></li>
+							<li class="language"><a href="https://securelist.ru" rel="alternate" hreflang="ru">Pусский</a></li>
+							<li class="language"><a href="https://de.securelist.com" rel="alternate" hreflang="de">Deutsch</a></li>
+							<li class="language"><a href="https://securelist.fr" rel="alternate" hreflang="fr">Français</a></li>
+							<li class="language"><a href="https://securelist.it" rel="alternate" hreflang="it">Italiano</a></li>
+							<li class="language"><a href="https://securelist.lat" rel="alternate" hreflang="sp">Español</a></li>
+							<li class="language"><a href="http://securelist.pl/?VLredirect=1" rel="alternate" hreflang="pl">Polski</a></li>
+						</ul>
+				</div><!-- .inside-col-3 -->
+
+			</div><!-- .header-col-2 -->
+
+			<div class="header-col-3 left">
+
+				<nav class="primary-navigation navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<div class="menu-primary-container"><ul id="menu-primary" class="menu securelist-nav-menu menu-primary"><li id="menu-item-226" class="menu-item-threats menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-226"><a>Threats</a>
+<ul  class="sub-menu">
+	<li id="menu-item-63229" class="topic-item detected menu-item menu-item-type-custom menu-item-object-custom menu-item-63229"><a href="/threats/detected-objects/"><span class="ico-detected-objects" ></span>Detected Objects</a></li>
+	<li id="menu-item-63230" class="topic-item spam menu-item menu-item-type-custom menu-item-object-custom menu-item-63230"><a href="/threats/spam-and-phishing"><span class="ico-spam-and-phishing" ></span>Spam and Phishing</a></li>
+	<li id="menu-item-63231" class="topic-item vulnerabilities menu-item menu-item-type-custom menu-item-object-custom menu-item-63231"><a href="/threats/vulnerabilities-and-hackers"><span class="ico-vulnerabilities-and-hackers" ></span>Vulnerabilities and Hackers</a></li>
+	<li id="menu-item-63232" class="topic-item internal-threats menu-item menu-item-type-custom menu-item-object-custom menu-item-63232"><a href="/threats/internal-threats"><span class="ico-internal-threats" ></span>Internal Threats</a></li>
+</ul>
+</li>
+<li id="menu-item-230" class="menu-item-categories menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-230"><a>Categories</a>
+<ul  class="sub-menu">
+	<li id="menu-item-58019" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58019"><a href="https://securelist.com/all?category=27">Events</a></li>
+	<li id="menu-item-58021" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-58021"><a href="https://securelist.com/all?category=22">Incidents</a></li>
+	<li id="menu-item-58022" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58022"><a href="https://securelist.com/all?category=105">Opinions</a></li>
+	<li id="menu-item-58023" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58023"><a href="https://securelist.com/all?category=24">Research</a></li>
+	<li id="menu-item-65144" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65144"><a href="https://securelist.com/all?category=437">Security Bulletin</a></li>
+	<li id="menu-item-58024" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58024"><a href="https://securelist.com/all?category=91">Spam Test</a></li>
+	<li id="menu-item-58025" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58025"><a href="https://securelist.com/all?category=25">Virus Watch</a></li>
+	<li id="menu-item-58026" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58026"><a href="https://securelist.com/all?category=48">Webcasts</a></li>
+	<li id="menu-item-66206" class="website-archive menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-66206"><a href="https://securelist.com/all/">Website archive</a></li>
+</ul>
+</li>
+<li id="menu-item-277" class="menu-item-tags menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-277"><a>Tags</a>
+<ul  class="sub-menu">
+	<li id="menu-item-73080" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73080"><a href="https://securelist.com/all/?tag=538">APT</a></li>
+	<li id="menu-item-236" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-236"><a href="https://securelist.com/all?tag=6">Botnets</a></li>
+	<li id="menu-item-58016" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58016"><a href="https://securelist.com/all?tag=185">Cyber espionage</a></li>
+	<li id="menu-item-58017" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58017"><a href="https://securelist.com/all?tag=186">Cyber weapon</a></li>
+	<li id="menu-item-58015" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58015"><a href="https://securelist.com/all?tag=69">Internet Banking</a></li>
+	<li id="menu-item-58013" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58013"><a href="https://securelist.com/all?tag=76">Mobile Malware</a></li>
+	<li id="menu-item-58014" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58014"><a href="https://securelist.com/all?tag=29">Social Engineering</a></li>
+	<li id="menu-item-238" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-238"><a href="https://securelist.com/all?tag=8">Social networks</a></li>
+	<li id="menu-item-58012" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58012"><a href="https://securelist.com/all?tag=53">Targeted Attacks</a></li>
+	<li id="menu-item-57837" class="show-all-tags menu-item menu-item-type-post_type menu-item-object-page menu-item-57837"><a href="https://securelist.com/tags/">Show all tags</a></li>
+</ul>
+</li>
+<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="https://securelist.com/encyclopedia/">Encyclopedia</a></li>
+<li id="menu-item-241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241"><a href="/statistics/">Statistics</a></li>
+<li id="menu-item-58141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58141"><a href="https://threats.kaspersky.com/">Descriptions</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+
+<div class="menu-button">Menu</div>
+				<nav class="mobile-nav">
+					<ul id="mobile-navigation" class="menu menu-mobile flexnav"><li class="menu-item-threats menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-226"><a>Threats</a>
+<ul  class="sub-menu">
+	<li class="topic-item detected menu-item menu-item-type-custom menu-item-object-custom menu-item-63229"><a href="/threats/detected-objects/"><span class="ico-detected-objects" ></span>Detected Objects</a></li>
+	<li class="topic-item spam menu-item menu-item-type-custom menu-item-object-custom menu-item-63230"><a href="/threats/spam-and-phishing"><span class="ico-spam-and-phishing" ></span>Spam and Phishing</a></li>
+	<li class="topic-item vulnerabilities menu-item menu-item-type-custom menu-item-object-custom menu-item-63231"><a href="/threats/vulnerabilities-and-hackers"><span class="ico-vulnerabilities-and-hackers" ></span>Vulnerabilities and Hackers</a></li>
+	<li class="topic-item internal-threats menu-item menu-item-type-custom menu-item-object-custom menu-item-63232"><a href="/threats/internal-threats"><span class="ico-internal-threats" ></span>Internal Threats</a></li>
+</ul>
+</li>
+<li class="menu-item-categories menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-230"><a>Categories</a>
+<ul  class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58019"><a href="https://securelist.com/all?category=27">Events</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-58021"><a href="https://securelist.com/all?category=22">Incidents</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58022"><a href="https://securelist.com/all?category=105">Opinions</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58023"><a href="https://securelist.com/all?category=24">Research</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65144"><a href="https://securelist.com/all?category=437">Security Bulletin</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58024"><a href="https://securelist.com/all?category=91">Spam Test</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58025"><a href="https://securelist.com/all?category=25">Virus Watch</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58026"><a href="https://securelist.com/all?category=48">Webcasts</a></li>
+	<li class="website-archive menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-66206"><a href="https://securelist.com/all/">Website archive</a></li>
+</ul>
+</li>
+<li class="menu-item-tags menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-277"><a>Tags</a>
+<ul  class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73080"><a href="https://securelist.com/all/?tag=538">APT</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-236"><a href="https://securelist.com/all?tag=6">Botnets</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58016"><a href="https://securelist.com/all?tag=185">Cyber espionage</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58017"><a href="https://securelist.com/all?tag=186">Cyber weapon</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58015"><a href="https://securelist.com/all?tag=69">Internet Banking</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58013"><a href="https://securelist.com/all?tag=76">Mobile Malware</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58014"><a href="https://securelist.com/all?tag=29">Social Engineering</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-238"><a href="https://securelist.com/all?tag=8">Social networks</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-58012"><a href="https://securelist.com/all?tag=53">Targeted Attacks</a></li>
+	<li class="show-all-tags menu-item menu-item-type-post_type menu-item-object-page menu-item-57837"><a href="https://securelist.com/tags/">Show all tags</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="https://securelist.com/encyclopedia/">Encyclopedia</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241"><a href="/statistics/">Statistics</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58141"><a href="https://threats.kaspersky.com/">Descriptions</a></li>
+</ul>				</nav><!-- #site-navigation -->
+
+			</div><!-- .header-col-3 -->
+
+		</header><!-- #masthead -->
+
+		<div id="main" class="site-main">
+
+	<div id="primary" class="grid col-6 content-area">
+		<main id="content" class="site-content" role="main" itemscope="" itemtype="http://schema.org/Blog">
+				
+
+<article id="post-78351" class="post-78351 post type-post status-publish format-standard has-post-thumbnail category-featured category-incidents tag-encryption tag-malware-descriptions tag-ransomware tag-vulnerabilities-and-exploits tag-wannacry threat-category-malicious-programs threat-category-trojan-programs threat-category-what-we-detect securelist-post" itemscope="" itemid="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+	<header class="col-5 entry-header">
+
+		<div class="right entry-print">
+			<a title="Print this page" href="javascript:window.print()"><span class="ico-print"></span></a>
+		</div>
+
+		<div class="col-4 title-wrap">
+			<h1 class="entry-title" itemprop="name">WannaCry ransomware used in widespread attacks all over the world</h1>
+					</div><!-- .title-wrap -->
+
+		<div class="clear entry-meta">
+			<div class="entry-author" itemprop="author">
+				By <a href="https://securelist.com/author/great/" title="Posts by GReAT" class="author url fn" rel="author">GReAT</a>  on <time itemprop="datePublished" datetime="2017-05-12T17:30:32+00:00">May 12, 2017. 5:30 pm</time>			</div>
+			<div class="clear uppercase entry-category" itemprop="keywords">
+				<a href="https://securelist.com/all?category=22" rel="category tag" >Incidents</a>			</div>
+		</div><!-- .entry-meta -->
+
+		<div class="entry-social entry-social-right">
+			<div class="social-likes" data-title="WannaCry ransomware used in widespread attacks all over the world" data-url="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/" data-counters="yes" data-zeroes="yes"><div class="facebook" title="Share via Facebook">Facebook</div>
+<div class="plusone" title="Share via Google">Google</div>
+<div class="twitter" title="Share via Twitter">Twitter</div></div>		</div><!-- .entry-social -->
+
+	</header><!-- .entry-header -->
+
+	<div class="columnwrapper content-list-section">
+		<div id="primary" class="content-area grid col-4 main-content-section">
+
+		
+		<div class="uppercase entry-tags">
+			<a href="https://securelist.com/all?tag=672" rel="tag">Encryption</a> <a href="https://securelist.com/all?tag=123" rel="tag">Malware Descriptions</a> <a href="https://securelist.com/all?tag=121" rel="tag">Ransomware</a> <a href="https://securelist.com/all?tag=41" rel="tag">Vulnerabilities and exploits</a> <a href="https://securelist.com/all?tag=871" rel="tag">WannaCry</a>		</div>
+
+		
+		<div class="entry-content" itemprop="articleBody">
+			<p>Earlier today, our products detected and successfully blocked a large number of ransomware attacks around the world. In these attacks, data is encrypted with the extension &#8220;.WCRY&#8221; added to the filenames.</p>
+<p>Our analysis indicates the attack, dubbed &#8220;WannaCry&#8221;, is initiated through an SMBv2 remote code execution in Microsoft Windows. This exploit (codenamed &#8220;EternalBlue&#8221;) has been made available on the internet through the Shadowbrokers dump on April 14th, 2017 and <a href="https://technet.microsoft.com/en-us/library/security/ms17-010.aspx" target="_blank" rel="noopener noreferrer">patched by Microsoft</a> on March 14.</p>
+<p>Unfortunately, it appears that many organizations have not yet installed the patch.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_01.png" class="magnificImage"><img class="aligncenter size-large wp-image-78352" src="https://cdn.securelist.com/files/2017/05/wannacry_01-1024x557.png" alt="" width="604" height="329" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>Source: https://support.kaspersky.com/shadowbrokers</i></p>
+<p>A few hours ago, Spain&#8217;s Computer Emergency Response Team CCN-CERT, posted an <a href="https://www.ccn-cert.cni.es/seguridad-al-dia/comunicados-ccn-cert/4464-ataque-masivo-de-ransomware-que-afecta-a-un-elevado-numero-de-organizaciones-espanolas.html" target="_blank" rel="noopener noreferrer">alert</a> on their site about a massive ransomware attack affecting several Spanish organizations. The alert recommends the installation of updates in the <a href="https://technet.microsoft.com/en-us/library/security/ms17-mar.aspx" target="_blank" rel="noopener noreferrer">Microsoft March 2017 Security Bulletin</a> as a means of stopping the spread of the attack.</p>
+<p>The National Health Service (NHS) in the U.K. <a href="https://digital.nhs.uk/article/1491/Statement-on-reported-NHS-cyber-attack" target="_blank" rel="noopener noreferrer">also issued an alert</a> and confirmed infections at 16 medical institutions. We have confirmed additional infections in several additional countries, including Russia, Ukraine, and India.</p>
+<p>It&#8217;s important to understand that while unpatched Windows computers exposing their SMB services can be remotely attacked with the &#8220;EternalBlue&#8221; exploit and infected by the WannaCry ransomware, the lack of existence of this vulnerability doesn&#8217;t really prevent the ransomware component from working. Nevertheless, the presence of this vulnerability appears to be the most significant factor that caused the outbreak.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_02.png" class="magnificImage"><img class="aligncenter size-full wp-image-78353" src="https://cdn.securelist.com/files/2017/05/wannacry_02.png" alt="" width="1007" height="823" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>CCN-CERT alert (in Spanish)</i></p>
+<h2 id="analysis-of-the-attack">Analysis of the attack</h2>
+<p>Currently, we have recorded more than 45,000 attacks of the WannaCry ransomware in 74 countries around the world, mostly in Russia. It&#8217;s important to note that our visibility may be limited and incomplete and the range of targets and victims is likely much, much higher.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_03.png" class="magnificImage"><img class="aligncenter size-full wp-image-78354" src="https://cdn.securelist.com/files/2017/05/wannacry_03.png" alt="" width="718" height="443" /></a></p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_04.png" class="magnificImage"><img class="aligncenter size-large wp-image-78355" src="https://cdn.securelist.com/files/2017/05/wannacry_04-1024x514.png" alt="" width="604" height="303" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>Geographical target distribution according to our telemetry for the first few hours of the attack</i></p>
+<p>The malware used in the attacks encrypts the files and also drops and executes a decryptor tool. The request for $600 in Bitcoin is displayed along with the wallet. It&#8217;s interesting that the initial request in this sample is for $600 USD, as the first five payments to that wallet is approximately $300 USD. It suggests that the group is increasing the ransom demands.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_05.png" class="magnificImage"><img class="aligncenter size-large wp-image-78356" src="https://cdn.securelist.com/files/2017/05/wannacry_05-1024x774.png" alt="" width="604" height="457" /></a></p>
+<p>The tool was designed to address users of multiple countries, with translated messages in different languages.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_06.png" class="magnificImage"><img class="aligncenter size-full wp-image-78357" src="https://cdn.securelist.com/files/2017/05/wannacry_06.png" alt="" width="823" height="653" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>Language list that the malware supports</i></p>
+<p>Note that the &#8220;payment will be raised&#8221; after a specific countdown, along with another display raising urgency to pay up, threatening that the user will completely lose their files after the set timeout. Not all ransomware provides this timer countdown.</p>
+<p>To make sure that the user doesn&#8217;t miss the warning, the tool changes the user&#8217;s wallpaper with instructions on how to find the decryptor tool dropped by the malware.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_07.png" class="magnificImage"><img class="aligncenter size-full wp-image-78358" src="https://cdn.securelist.com/files/2017/05/wannacry_07.png" alt="" width="880" height="451" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>An image used to replace user&#8217;s wallpaper</i></p>
+<p>Malware samples contain no reference to any specific culture or codepage other than universal English and Latin codepage CP1252. The files contain version info stolen from random Microsoft Windows 7 system tools:</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_08.png" class="magnificImage"><img class="aligncenter size-large wp-image-78359" src="https://cdn.securelist.com/files/2017/05/wannacry_08-1024x372.png" alt="" width="604" height="219" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>Properties of malware files used by WannaCry</i></p>
+<p>For convenient bitcoin payments, the malware directs to a page with a QR code at btcfrog, which links to their main bitcoin wallet <a href="https://blockchain.info/address/13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94" target="_blank" rel="noopener noreferrer">13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94</a>. Image metadata does not provide any additional info:</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_09.png" class="magnificImage"><img class="aligncenter size-medium wp-image-78360" src="https://cdn.securelist.com/files/2017/05/wannacry_09-300x180.png" alt="" width="300" height="180" /></a></p>
+<p>One of the Bitcoin wallets used by the attackers: <a href="https://blockchain.info/address/13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94" target="_blank" rel="noopener noreferrer">13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94</a></p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_10.png" class="magnificImage"><img class="aligncenter size-large wp-image-78361" src="https://cdn.securelist.com/files/2017/05/wannacry_10-1024x264.png" alt="" width="604" height="156" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>One of the attacker wallets received 0.88 BTC during the last hours</i></p>
+<p>Another Bitcoin wallets included in the attackers&#8217; &#8220;readme.txt&#8221; from the samples are:<br />
+115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn &#8211; 0.32 BTC</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_11.png" class="magnificImage"><img class="aligncenter size-large wp-image-78362" src="https://cdn.securelist.com/files/2017/05/wannacry_11-1024x262.png" alt="" width="604" height="155" /></a></p>
+<p>12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw &#8211; 0.16 BTC<br />
+1QAc9S5EmycqjzzWDc1yiWzr9jJLC8sLiY</p>
+<p>For command and control, the malware extracts and uses Tor service executable with all necessary dependencies to access the Tor network:</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_12.png" class="magnificImage"><img class="aligncenter size-full wp-image-78363" src="https://cdn.securelist.com/files/2017/05/wannacry_12.png" alt="" width="871" height="365" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>A list of dropped files related to Tor service</i></p>
+<p>In terms of targeted files, the ransomware encrypts files with the following extensions:</p>
+<p><code><em>.der, .pfx, .key, .crt, .csr, .p12, .pem, .odt, .ott, .sxw, .stw, .uot, .3ds, .max, .3dm, .ods, .ots, .sxc, .stc, .dif, .slk, .wb2, .odp, .otp, .sxd, .std, .uop, .odg, .otg, .sxm, .mml, .lay, .lay6, .asc, .sqlite3, .sqlitedb, .sql, .accdb, .mdb, .dbf, .odb, .frm, .myd, .myi, .ibd, .mdf, .ldf, .sln, .suo, .cpp, .pas, .asm, .cmd, .bat, .ps1, .vbs, .dip, .dch, .sch, .brd, .jsp, .php, .asp, .java, .jar, .class, .mp3, .wav, .swf, .fla, .wmv, .mpg, .vob, .mpeg, .asf, .avi, .mov, .mp4, .3gp, .mkv, .3g2, .flv, .wma, .mid, .m3u, .m4u, .djvu, .svg, .psd, .nef, .tiff, .tif, .cgm, .raw, .gif, .png, .bmp, .jpg, .jpeg, .vcd, .iso, .backup, .zip, .rar, .tgz, .tar, .bak, .tbk, .bz2, .PAQ, .ARC, .aes, .gpg, .vmx, .vmdk, .vdi, .sldm, .sldx, .sti, .sxi, .602, .hwp, .snt, .onetoc2, .dwg, .pdf, .wk1, .wks, .123, .rtf, .csv, .txt, .vsdx, .vsd, .edb, .eml, .msg, .ost, .pst, .potm, .potx, .ppam, .ppsx, .ppsm, .pps, .pot, .pptm, .pptx, .ppt, .xltm, .xltx, .xlc, .xlm, .xlt, .xlw, .xlsb, .xlsm, .xlsx, .xls, .dotx, .dotm, .dot, .docm, .docb, .docx, .doc</em></code></p>
+<p>The file extensions that the malware is targeting contain certain clusters of formats including:</p>
+<ol>
+<li>Commonly used office file extensions (.ppt, .doc, .docx, .xlsx, .sxi).</li>
+<li>Less common and nation-specific office formats (.sxw, .odt, .hwp).</li>
+<li>Archives, media files (.zip, .rar, .tar, .bz2, .mp4, .mkv)</li>
+<li>Emails and email databases (.eml, .msg, .ost, .pst, .edb).</li>
+<li>Database files (.sql, .accdb, .mdb, .dbf, .odb, .myd).</li>
+<li>Developers&#8217; sourcecode and project files (.php, .java, .cpp, .pas, .asm).</li>
+<li>Encryption keys and certificates (.key, .pfx, .pem, .p12, .csr, .gpg, .aes).</li>
+<li>Graphic designers, artists and photographers files (.vsd, .odg, .raw, .nef, .svg, .psd).</li>
+<li>Virtual machine files (.vmx, .vmdk, .vdi).</li>
+</ol>
+<p>The WannaCry dropper drops multiple &#8220;user manuals&#8221; on different languages:</p>
+<p><code><em>Bulgarian, Chinese (simplified), Chinese (traditional), Croatian, Czech, Danish, Dutch, English, Filipino, Finnish, French, German, Greek, Indonesian, Italian, Japanese, Korean, Latvian, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish, Vietnamese</em></code></p>
+<p>The example of a &#8220;user manual&#8221; in English:</p>
+<p><code><em>What Happened to My Computer?<br />
+Your important files are encrypted.<br />
+Many of your documents, photos, videos, databases and other files are no longer accessible because they have been encrypted. Maybe you are busy looking for a way to<br />
+recover your files, but do not waste your time. Nobody can recover your files without our decryption service.</p>
+<p>Can I Recover My Files?<br />
+Sure. We guarantee that you can recover all your files safely and easily. But you have not so enough time.<br />
+You can decrypt some of your files for free. Try now by clicking .<br />
+But if you want to decrypt all your files, you need to pay.<br />
+You only have 3 days to submit the payment. After that the price will be doubled.<br />
+Also, if you don't pay in 7 days, you won't be able to recover your files forever.<br />
+We will have free events for users who are so poor that they couldn't pay in 6 months.</p>
+<p>How Do I Pay?<br />
+Payment is accepted in Bitcoin only. For more information, click .<br />
+Please check the current price of Bitcoin and buy some bitcoins. For more information, click .<br />
+And send the correct amount to the address specified in this window.<br />
+After your payment, click . Best time to check: 9:00am - 11:00am GMT from Monday to Friday.<br />
+Once the payment is checked, you can start decrypting your files immediately.</p>
+<p>Contact<br />
+If you need our assistance, send a message by clicking .</p>
+<p>We strongly recommend you to not remove this software, and disable your anti-virus for a while, until you pay and the payment gets processed. If your anti-virus gets<br />
+updated and removes this software automatically, it will not be able to recover your files even if you pay!</em></code></p>
+<p>It also drops batch and VBS script files, and a &#8220;readme&#8221; (contents are provided in the appendix).</p>
+<p>Just in case the user closed out the bright red dialog box, or doesn&#8217;t understand it, the attackers drop a text file to disk with further instruction. An example of their &#8220;readme&#8221; dropped to disk as &#8220;@Please_Read_Me@.txt&#8221; to many directories on the victim host. Note that the English written here is done well, with the exception of &#8220;How can I trust?&#8221;. To date, only two transactions appear to have been made with this 115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn bitcoin address for almost $300:</p>
+<p><code><em>Q:  What's wrong with my files?</p>
+<p>A: Ooops, your important files are encrypted. It means you will not be able to access them anymore until they are decrypted.<br />
+If you follow our instructions, we guarantee that you can decrypt all your files quickly and safely!<br />
+Let's start decrypting!</p>
+<p>Q: What do I do?</p>
+<p>A: First, you need to pay service fees for the decryption.<br />
+Please send $300 worth of bitcoin to this bitcoin address: 115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn</p>
+<p>Next, please find an application file named "@WanaDecryptor@.exe". It is the decrypt software.<br />
+Run and follow the instructions! (You may need to disable your antivirus for a while.)</p>
+<p>Q: How can I trust?</p>
+<p>A: Don't worry about decryption.<br />
+We will decrypt your files surely because nobody will trust us if we cheat users.</p>
+<p>* If you need our assistance, send a message by clicking on the decryptor window.</em></code></p>
+<p>Once started it immediately spawns several processes to change file permissions and communicate with tor hidden c2 servers:</p>
+<ul>
+<li>attrib +h .</li>
+<li>icacls . /grant Everyone:F /T /C /Q</li>
+<li>C:\Users\xxx\AppData\Local\Temp\taskdl.exe</li>
+<li>@WanaDecryptor@.exe fi</li>
+<li>300921484251324.bat</li>
+<li>C:\Users\xxx\AppData\Local\Temp\taskdl.exe</li>
+<li>C:\Users\xxx\AppData\Local\Temp\taskdl.exe</li>
+</ul>
+<p>The malware checks the mutexes &#8220;Global\MsWinZonesCacheCounterMutexA&#8221; and &#8220;Global\MsWinZonesCacheCounterMutexA0&#8221; (Update: <a href="https://blog.didierstevens.com/2017/05/14/quickpost-wannacrys-mutex-is-mswinzonescachecountermutexa0-digit-zero-at-the-end/"  target="_blank">Thanks Didier Stevens for the correction on the extra mutex name!</a>) to determine if a system is already infected. It also runs the command:</p>
+<p><code>cmd.exe /c vssadmin delete shadows /all /quiet &amp; wmic shadowcopy delete &amp; bcdedit /set {default} bootstatuspolicy ignoreallfailures &amp; bcdedit /set {default} recoveryenabled no &amp; wbadmin delete catalog -quiet</code></p>
+<p>This results in an UAC popup that user may notice.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_13.png" class="magnificImage"><img class="aligncenter size-medium wp-image-78364" src="https://cdn.securelist.com/files/2017/05/wannacry_13-300x230.png" alt="" width="300" height="230" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>UAC popup to disable Volume Shadow Service (System Restore)</i></p>
+<p>The malware use TOR hidden services for command and control. The list of .onion domains inside is as following:</p>
+<ul>
+<li>gx7ekbenv2riucmf.onion</li>
+<li>57g7spgrzlojinas.onion</li>
+<li>Xxlvbrloxvriy2c5.onion</li>
+<li>76jdd2ir2embyv47.onion</li>
+<li>cwwnhwhlz52maqm7.onion</li>
+<li>sqjolphimrr7jqw6.onion</li>
+</ul>
+<h2 id="mitigation-and-detection-information">Mitigation and detection information</h2>
+<p>Quite essential in stopping these attacks is the <a href="https://support.kaspersky.com/11938" target="_blank" rel="noopener noreferrer">Kaspersky System Watcher</a> component. The System Watcher component has the ability to rollback the changes done by ransomware in the event that a malicious sample managed to bypass other defenses. This is extremely useful in case a ransomware sample slips past defenses and attempts to encrypt the data on the disk.</p>
+<p><a href="https://cdn.securelist.com/files/2017/05/wannacry_14.png" class="magnificImage"><img class="aligncenter size-full wp-image-78370" src="https://cdn.securelist.com/files/2017/05/wannacry_14.png" alt="" width="437" height="443" /></a></p>
+<p style="text-align: center;font-weight: bold"><i>System Watcher blocking the WannaCry attacks</i></p>
+<p><strong>Mitigation recommendations:</strong></p>
+<ol>
+<li>Make sure that all hosts are running and have enabled endpoint security solutions.</li>
+<li>Install the official patch (<a href="https://technet.microsoft.com/en-us/library/security/ms17-010.aspx" target="_blank" rel="noopener noreferrer">MS17-010</a>) from Microsoft, which closes the affected SMB Server vulnerability used in this attack.</li>
+<li>Ensure that Kaspersky Lab products have the System Watcher component enabled.</li>
+<li>Scan all systems. After detecting the malware attack as MEM:Trojan.Win64.EquationDrug.gen, reboot the system. Once again, make sure MS17-010 patches are installed.</li>
+</ol>
+<p><strong>Samples observed in attacks so far:</strong></p>
+<p>4fef5e34143e646dbf9907c4374276f5<br />
+5bef35496fcbdbe841c82f4d1ab8b7c2<br />
+775a0631fb8229b2aa3d7621427085ad<br />
+7bf2b57f2a205768755c07f238fb32cc<br />
+7f7ccaa16fb15eb1c7399d422f8363e8<br />
+8495400f199ac77853c53b5a3f278f3e<br />
+84c82835a5d21bbcf75a61706d8ab549<br />
+86721e64ffbd69aa6944b9672bcabb6d<br />
+8dd63adb68ef053e044a5a2f46e0d2cd<br />
+b0ad5902366f860f85b892867e5b1e87<br />
+d6114ba5f10ad67a4131ab72531f02da<br />
+db349b97c37d22f5ea1d1841e3c89eb4<br />
+e372d07207b4da75b3434584cd9f3450<br />
+f529f4556a5126bba499c26d67892240</p>
+<p><strong>Kaspersky Lab detection names:</strong></p>
+<p>Trojan-Ransom.Win32.Gen.djd<br />
+Trojan-Ransom.Win32.Scatter.tr<br />
+Trojan-Ransom.Win32.Wanna.b<br />
+Trojan-Ransom.Win32.Wanna.c<br />
+Trojan-Ransom.Win32.Wanna.d<br />
+Trojan-Ransom.Win32.Wanna.f<br />
+Trojan-Ransom.Win32.Zapchast.i<br />
+PDM:Trojan.Win32.Generic</p>
+<p>Kaspersky Lab experts are currently working on the possibility of creating a decryption tool to help victims. We will provide an update when a tool is available.</p>
+<h2 id="appendix">Appendix</h2>
+<p><strong>Batch file</strong></p>
+<p><code>@echo off<br />
+echo SET ow = WScript.CreateObject("WScript.Shell")&gt; m.vbs<br />
+echo SET om = ow.CreateShortcut("C:\Users\ADMINI~1\AppData\Local\Temp\@WanaDecryptor@.exe.lnk")&gt;&gt; m.vbs</code></p>
+<p>echo om.TargetPath = &#8220;C:\Users\ADMINI~1\AppData\Local\Temp\@WanaDecryptor@.exe&#8221;&gt;&gt; m.vbs</p>
+<p>echo om.Save&gt;&gt; m.vbs<br />
+cscript.exe //nologo m.vbs<br />
+del m.vbs<br />
+del /a %0</p>
+<p>m.vbs</p>
+<p><code>SET ow = WScript.CreateObject("WScript.Shell")<br />
+SET om = ow.CreateShortcut("C:\Users\ADMINI~1\AppData\Local\Temp\@WanaDecryptor@.exe.lnk")<br />
+om.TargetPath = "C:\Users\ADMINI~1\AppData\Local\Temp\@WanaDecryptor@.exe"<br />
+om.Save</code></p>
+		</div><!-- .entry-content -->
+
+		
+		<h3 class="widget-title">Related Posts</h3><ul class="related-posts">
+	<li class="promo-box promo-210x130" style="background-image:url(https://cdn.securelist.com/files/2017/04/abstraction_6-300x210.jpg);">
+		<p class="headline" style="line-height:10px;"><a href="https://securelist.com/a-kings-ransom-it-is-not/79057/">A King&#8217;s Ransom It is Not</a></p>
+	</li><!-- .promo-box -->
+
+
+	<li class="promo-box promo-210x130" style="background-image:url(https://cdn.securelist.com/wp-content/themes/securelist/images/article-default/abstraction_9.jpg);">
+		<p class="headline" style="line-height:10px;"><a href="https://securelist.com/no-free-pass-for-expetr/79008/">No Free Pass for ExPetr</a></p>
+	</li><!-- .promo-box -->
+
+
+	<li class="promo-box promo-210x130" style="background-image:url(https://cdn.securelist.com/files/2017/06/abstraction_7-300x210.jpg);">
+		<p class="headline" style="line-height:10px;"><a href="https://securelist.com/in-expetrpetyas-shadow-fakecry-ransomware-wave-hits-ukraine/78973/">In ExPetr/Petya&#8217;s shadow, FakeCry ransomware wave hits Ukraine</a></p>
+	</li><!-- .promo-box -->
+
+</ul>
+		
+<div id="comments" class="entry-comments">
+
+			<div class="aligncenter white comment-title">
+			<span class="left uppercase comment-count">There are 43 comments</span>
+			<span class="right comment-login-text">If you would like to comment on this article you must first <a href="https://securelist.com/wp-login.php">login</a></span>
+		</div>
+
+		<ol class="comment-list">
+			
+		<li class="comment even thread-even depth-1 parent" id="comment-1020213">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/f2f1593c57b47cf330e8b4dddb916afa?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f2f1593c57b47cf330e8b4dddb916afa?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">c0den</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T19:33:18+00:00">May 12, 2017. 7:33 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>You may have an error throughout this entry. You call out SMBv2 however based on MS17-010 and what I have read about wannacry, it is SMBv1 that is being used for lateral movement.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020213#respond' onclick='return addComment.moveForm( "comment-1020213", "1020213", "respond", "78351" )' aria-label='Reply to c0den'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment odd alt depth-2" id="comment-1021919">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/e3876999b0254df00f3c8cd8507c0fd7?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e3876999b0254df00f3c8cd8507c0fd7?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">thesaint</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T15:19:14+00:00">May 13, 2017. 3:19 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>exactly i have the same worry kaspersky and  symantec said its smb v2 and they refer to MS17-010 which only mention SMB v1 ??!!!!!!!!!!!!!!!!!!</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021919#respond' onclick='return addComment.moveForm( "comment-1021919", "1021919", "respond", "78351" )' aria-label='Reply to thesaint'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even depth-2" id="comment-1023495">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/0d651bf7845496f9b4217747ee27f421?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0d651bf7845496f9b4217747ee27f421?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Gary Mclean</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-14T09:27:02+00:00">May 14, 2017. 9:27 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I had same thoughts. Plus Microsoft have released a patch for xp and server 2003 which ONLY supports SMBv1</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1023495#respond' onclick='return addComment.moveForm( "comment-1023495", "1023495", "respond", "78351" )' aria-label='Reply to Gary Mclean'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1020230">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/900b49938aac14f1dc0a77eb50e33ee2?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/900b49938aac14f1dc0a77eb50e33ee2?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Leonard</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T19:45:38+00:00">May 12, 2017. 7:45 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Most infected computers are in Russia and it&#8217;s a sign that WannaCry is a planned cyber-attack against Russian organizations and institutions, including Ministry of Internal Affairs of Russia and Investigative Committee of Russia as it&#8217;s sai there <a href="https://malwareless.com/wannacry-ransomware-massively-attacks-computer-systems-world/" rel="nofollow">https://malwareless.com/wannacry-ransomware-massively-attacks-computer-systems-world/</a> . Russian hackers never attacked computers inside their country with ransomware in order to avoid further problems with police and FSB</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020230#respond' onclick='return addComment.moveForm( "comment-1020230", "1020230", "respond", "78351" )' aria-label='Reply to Leonard'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-even depth-1" id="comment-1020240">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/a43a7b3bef8539ffc048f9fb2bed400f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a43a7b3bef8539ffc048f9fb2bed400f?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">mullar</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T19:54:28+00:00">May 12, 2017. 7:54 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Useful</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020240#respond' onclick='return addComment.moveForm( "comment-1020240", "1020240", "respond", "78351" )' aria-label='Reply to mullar'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-1020318">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/5ffe2ff4ceb172c6ae3cfcf13d4e1ada?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5ffe2ff4ceb172c6ae3cfcf13d4e1ada?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Fernando</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T21:06:51+00:00">May 12, 2017. 9:06 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Hello guys,</p>
+<p>Kaspersky Security 10 for Windows Server (10.0.0.486) with Anti-Cryptor running will be block this attempt to encrypt?</p>
+<p>Best regards,</p>
+<p>Fernando.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020318#respond' onclick='return addComment.moveForm( "comment-1020318", "1020318", "respond", "78351" )' aria-label='Reply to Fernando'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-2" id="comment-1021316">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">DK</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T09:19:35+00:00">May 13, 2017. 9:19 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>KSWS (Kaspersky Security for Windows Servers) will monitor file shares on the server it is installed on using the Anti-Cryptor component if it is enabled. Should it detect an encryption algorithm being performed on contents of a file share by another endpoint, it will sever the network connection to that endpoint for an hour.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021316#respond' onclick='return addComment.moveForm( "comment-1021316", "1021316", "respond", "78351" )' aria-label='Reply to DK'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1020348">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/606ac3ebbf66c692b010a4fe5b33ae0f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/606ac3ebbf66c692b010a4fe5b33ae0f?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">A Another</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T21:24:53+00:00">May 12, 2017. 9:24 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>You guys are doing great.</p>
+<p>I hope you manage do create a decryption device and take the opportunity to give it away free.</p>
+<p>Good luck guys</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020348#respond' onclick='return addComment.moveForm( "comment-1020348", "1020348", "respond", "78351" )' aria-label='Reply to A Another'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-1020379">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/2533cc1cede9f626a7dc487b5f5b0d1d?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2533cc1cede9f626a7dc487b5f5b0d1d?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Mn90</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-12T21:30:47+00:00">May 12, 2017. 9:30 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Hi,<br />
+Is it correct attack over SMBv2? The MS17-010 official description talks about SMBv1<br />
+&#8221;<br />
+This security update resolves vulnerabilities in Microsoft Windows. The most severe of the vulnerabilities could allow remote code execution if an attacker sends specially crafted messages to a Microsoft Server Message Block 1.0 (SMBv1) server.<br />
+&#8220;</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020379#respond' onclick='return addComment.moveForm( "comment-1020379", "1020379", "respond", "78351" )' aria-label='Reply to Mn90'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment byuser comment-author-kudinov odd alt depth-2 parent" id="comment-1021319">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/a7a92b065f9a6afb3d88dba30b3bfb58?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a7a92b065f9a6afb3d88dba30b3bfb58?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">E K</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T09:24:55+00:00">May 13, 2017. 9:24 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>It&#8217;s correct.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021319#respond' onclick='return addComment.moveForm( "comment-1021319", "1021319", "respond", "78351" )' aria-label='Reply to E K'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-3 parent" id="comment-1021921">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/80b701b2c50c287e8903d0ca550d1153?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/80b701b2c50c287e8903d0ca550d1153?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Richard Bartlett</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T15:23:57+00:00">May 13, 2017. 3:23 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>You&#8217;ll need to provide a bit more validation than an anonymous assertion! Given that no other source in the world (other than people quoting this page) are identifying an SMB v2 flaw this has to be considered a typo someone doesn&#8217;t want to back down from.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021921#respond' onclick='return addComment.moveForm( "comment-1021921", "1021921", "respond", "78351" )' aria-label='Reply to Richard Bartlett'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment odd alt depth-4 parent" id="comment-1026641">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/a7a92b065f9a6afb3d88dba30b3bfb58?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a7a92b065f9a6afb3d88dba30b3bfb58?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">E.K.</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T17:24:42+00:00">May 15, 2017. 5:24 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>&#8220;The vulnerability exploited by the EternalBlue tool lies in the SMBv1 implementation. However, to exploit it, the tool also uses SMBv2. This means that it uses both SMBv1 and SMBv2 packets during the attack. Disabling SMBv1 or SMBv2 prevents the infection; however, while disabling SMBv1 (an old protocol) has no significant impact on modern systems, disabling SMBv2 can cause problems. This is why it is highly recommended to disable SMBv1 for the current attack and for the future.&#8221;<br />
+<a href="https://securelist.com/blog/research/78411/wannacry-faq-what-you-need-to-know-today/" rel="nofollow">https://securelist.com/blog/research/78411/wannacry-faq-what-you-need-to-know-today/</a></p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1026641#respond' onclick='return addComment.moveForm( "comment-1026641", "1026641", "respond", "78351" )' aria-label='Reply to E.K.'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-5" id="comment-1026774">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/537968c19cf193728cf07767374d916e?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/537968c19cf193728cf07767374d916e?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Robin Walker</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T20:42:10+00:00">May 15, 2017. 8:42 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Windows XP does not support SMBv2: it supports only SMBv1. So, if Windows XP machines were infected by EternalBlue (which appears to be the case) there must be an infection route that employs SMBv1 alone, without the help of SMBv2.</p>
+									</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1020882">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/55e4954ac93cfeb1aa251830a5641231?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/55e4954ac93cfeb1aa251830a5641231?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Brian N</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T03:41:12+00:00">May 13, 2017. 3:41 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Phew, good thing I have Kaspersky installed 🙂</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1020882#respond' onclick='return addComment.moveForm( "comment-1020882", "1020882", "respond", "78351" )' aria-label='Reply to Brian N'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1021300">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/8feb2d2c3448888c85b5fd854f28ab09?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/8feb2d2c3448888c85b5fd854f28ab09?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Khaled Ahmad</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T08:58:14+00:00">May 13, 2017. 8:58 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Thanks</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021300#respond' onclick='return addComment.moveForm( "comment-1021300", "1021300", "respond", "78351" )' aria-label='Reply to Khaled Ahmad'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1021441">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/b76138c31beb8bd5cd51e3528d23913f?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b76138c31beb8bd5cd51e3528d23913f?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">KenWhelp</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T10:17:39+00:00">May 13, 2017. 10:17 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Surely the people at fault here are those that did not install the March Windows update?<br />
+We are now nearly halfway through May.<br />
+I can&#8217;t think of any excuse not to keep updated with security vulnerability patches!<br />
+Keep up the good work, guys!</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021441#respond' onclick='return addComment.moveForm( "comment-1021441", "1021441", "respond", "78351" )' aria-label='Reply to KenWhelp'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1021479">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/0d6688b34e0624a4d0ded8b72788ae42?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0d6688b34e0624a4d0ded8b72788ae42?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Narcísio Jose Mula</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T10:49:52+00:00">May 13, 2017. 10:49 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Thank you</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021479#respond' onclick='return addComment.moveForm( "comment-1021479", "1021479", "respond", "78351" )' aria-label='Reply to Narcísio Jose Mula'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-1021589">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/b8d5240a439f6f713442a803ba9cdb70?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b8d5240a439f6f713442a803ba9cdb70?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Arnaud</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T12:39:02+00:00">May 13, 2017. 12:39 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Does KIS 2017 protects against Wanna Cry virus ?</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021589#respond' onclick='return addComment.moveForm( "comment-1021589", "1021589", "respond", "78351" )' aria-label='Reply to Arnaud'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-2" id="comment-1021799">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/47e45bddc880b8b9366908e91d8e5fab?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/47e45bddc880b8b9366908e91d8e5fab?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Mark</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T14:19:30+00:00">May 13, 2017. 2:19 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Enable System Watcher tool if its not and Also INSTALL THE PATCH</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021799#respond' onclick='return addComment.moveForm( "comment-1021799", "1021799", "respond", "78351" )' aria-label='Reply to Mark'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt depth-2" id="comment-1021915">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/30e3378c348e338239e9ae8658270979?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/30e3378c348e338239e9ae8658270979?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">B.ChinasubbaRao</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T14:55:09+00:00">May 13, 2017. 2:55 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>yes, I am used Kaspersky internet security-2017 past 4 years. it is everthing ok. well protected my computer.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021915#respond' onclick='return addComment.moveForm( "comment-1021915", "1021915", "respond", "78351" )' aria-label='Reply to B.ChinasubbaRao'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-1021694">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/c23eb98e9e204b2a6525349930529da4?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c23eb98e9e204b2a6525349930529da4?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Anil Murlidhar Jangam</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T13:11:30+00:00">May 13, 2017. 1:11 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Please do create a decryption device as early as possible and take the opportunity to give it away free.</p>
+<p>Thanking You.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021694#respond' onclick='return addComment.moveForm( "comment-1021694", "1021694", "respond", "78351" )' aria-label='Reply to Anil Murlidhar Jangam'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment odd alt depth-2" id="comment-1021917">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">DK</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T15:09:08+00:00">May 13, 2017. 3:09 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>To decrypt files changed by ransomware is not an easy task. It usually requires access to the encryption key. Whether someones shares this key, they find it during analysis, or just due to sloppy programming from the ransomwares author.<br />
+Either way, if a key is found, Kaspersky Lab makes decryption tools and they are all free. You can find existing ones on the website nomoreransom.org</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021917#respond' onclick='return addComment.moveForm( "comment-1021917", "1021917", "respond", "78351" )' aria-label='Reply to DK'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment even thread-even depth-1 parent" id="comment-1021750">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/c8b9d85cf474ef922f3653cd33d9e4c8?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c8b9d85cf474ef922f3653cd33d9e4c8?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">SUN</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T13:40:04+00:00">May 13, 2017. 1:40 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I am a Kaspersky user.  Do I get protected even I didn&#8217;t update the Windows patch?  I tried to update but it kept saying &#8216;searching for updates on this computer&#8217; for more than half an hour.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021750#respond' onclick='return addComment.moveForm( "comment-1021750", "1021750", "respond", "78351" )' aria-label='Reply to SUN'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment odd alt depth-2" id="comment-1021800">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/47e45bddc880b8b9366908e91d8e5fab?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/47e45bddc880b8b9366908e91d8e5fab?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Mark</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T14:21:25+00:00">May 13, 2017. 2:21 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Kaspersky will do what it can do&#8230; however this doesn&#8217;t guarantee that the attackers are not going to release another modification of the same. Install the Microsoft patch as advised to be safe.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021800#respond' onclick='return addComment.moveForm( "comment-1021800", "1021800", "respond", "78351" )' aria-label='Reply to Mark'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even depth-2" id="comment-1026416">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/5c0d98dc5b738ee2f692ffdefd69a317?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5c0d98dc5b738ee2f692ffdefd69a317?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Mike</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T13:29:24+00:00">May 15, 2017. 1:29 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>You have to make sure that you get this update on your machine from Windows.</p>
+<p>      Please don&#8217;t rely on Kaspersky, the virus could slip though in a second, or when you open up an attachment you shouldn&#8217;t.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1026416#respond' onclick='return addComment.moveForm( "comment-1026416", "1026416", "respond", "78351" )' aria-label='Reply to Mike'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1021798">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/c57dd21bf2df01755aaa7eddc0f33abd?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c57dd21bf2df01755aaa7eddc0f33abd?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">cookie munster</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T14:11:07+00:00">May 13, 2017. 2:11 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>NO antivirus alone can protect against all virus&#8217;s.</p>
+<p>Microsoft Patch (will be slow to download:)<br />
+<a href="http://www.catalog.update.microsoft.com/Search.aspx?q=KB4012598" rel="nofollow">http://www.catalog.update.microsoft.com/Search.aspx?q=KB4012598</a></p>
+<p>Make sure you have offline backups and/or cloud<br />
+have separate administrator account, use standard user day to day otherwise your whole system can be toast</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021798#respond' onclick='return addComment.moveForm( "comment-1021798", "1021798", "respond", "78351" )' aria-label='Reply to cookie munster'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-even depth-1" id="comment-1021918">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0a0ddf0bb32077264614ffb048b8960b?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">DK</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T15:16:29+00:00">May 13, 2017. 3:16 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Regarding protection from this malware using Kaspersky Lab solutions. Yes, you are protected. On top of this, this malware normally gains access to a computer via the user opening an attachment in a spam email. If you don&#8217;t know the sender, don&#8217;t open the attachment. Even if you know the sender, if you aren&#8217;t expecting a file, don&#8217;t open it.<br />
+The other way it can infect your machine is if you are unpatched and someone else using the same network opens the email. Say a family member for example.<br />
+Keep persisting with Windows Updates, they can take a while, but should work eventually.<br />
+If your windows updates were applied and you had up to date Kaspersky Lab software, you had nothing at all to worry about.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1021918#respond' onclick='return addComment.moveForm( "comment-1021918", "1021918", "respond", "78351" )' aria-label='Reply to DK'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-1022074">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/02bb91d3dcdb4bfc74697b7ce04517f5?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/02bb91d3dcdb4bfc74697b7ce04517f5?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Lovshak</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T16:58:35+00:00">May 13, 2017. 4:58 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I&#8217;m a die-hard Win XP SP3 user (there&#8217;s a lot of us out there).  Needless to say, Microsoft has long ago abandoned us and refuses to patch Win XP.</p>
+<p>I count on KIS 2017; I keep it up-to-date, and &#8216;Settings&#8217; clearly shows &#8220;System Watcher&#8221; enabled.</p>
+<p>Am I &#8220;WannaCry&#8221; safe?  Is there anything else I should do (short of replacing my PC and it&#8217;s vintage OS)?</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1022074#respond' onclick='return addComment.moveForm( "comment-1022074", "1022074", "respond", "78351" )' aria-label='Reply to Lovshak'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-2 parent" id="comment-1022337">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/fff1d409ed4369ec92816b957bf3e480?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fff1d409ed4369ec92816b957bf3e480?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Xx</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T19:17:44+00:00">May 13, 2017. 7:17 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>MS did patch for XP</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1022337#respond' onclick='return addComment.moveForm( "comment-1022337", "1022337", "respond", "78351" )' aria-label='Reply to Xx'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment odd alt depth-3 parent" id="comment-1023834">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/02bb91d3dcdb4bfc74697b7ce04517f5?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/02bb91d3dcdb4bfc74697b7ce04517f5?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Lovshak</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-14T14:23:01+00:00">May 14, 2017. 2:23 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Xx, thanks for your reply, but I see no evidence to support your claim &#8220;MS did patch for XP&#8221;.</p>
+<p>If you examine the official patch (MS17-010) from Microsoft  <a href="https://technet.microsoft.com/en-us/library/security/ms17-010.aspx" rel="nofollow">https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</a>  and it&#8217;s linked Microsoft Knowledge Base Article 4013389   <a href="https://support.microsoft.com/kb/4013389" rel="nofollow">https://support.microsoft.com/kb/4013389</a> , you will see the oldest supported OS for this patch is Windows Vista SP2.</p>
+<p>The Microsoft Support Lifecycle  <a href="http://go.microsoft.com/fwlink/?LinkId=21742" rel="nofollow">http://go.microsoft.com/fwlink/?LinkId=21742</a> when searched for my OS (Win XP SP3), shows the &#8220;Extended Support End Date&#8221; was 4/8/2014 &#8212; more than 3 years ago.  Can you clarify your post, Xx?</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1023834#respond' onclick='return addComment.moveForm( "comment-1023834", "1023834", "respond", "78351" )' aria-label='Reply to Lovshak'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	<ol class="children">
+
+		<li class="comment even depth-4" id="comment-1025229">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/5467a87bcee7c58d2704d1d911eaa965?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5467a87bcee7c58d2704d1d911eaa965?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Some Guy</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T01:16:05+00:00">May 15, 2017. 1:16 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Google is your friend.<br />
+Wannacry XP Patch information:<br />
+<a href="https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/" rel="nofollow">https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</a></p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1025229#respond' onclick='return addComment.moveForm( "comment-1025229", "1025229", "respond", "78351" )' aria-label='Reply to Some Guy'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt depth-4" id="comment-1025551">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/6347313661ca1555c00911e800e30906?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6347313661ca1555c00911e800e30906?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Lloyd Dunamis</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T03:45:13+00:00">May 15, 2017. 3:45 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>WinXP patches are located over here.<br />
+<a href="https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/" rel="nofollow">https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</a></p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1025551#respond' onclick='return addComment.moveForm( "comment-1025551", "1025551", "respond", "78351" )' aria-label='Reply to Lloyd Dunamis'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even depth-4" id="comment-1025975">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/f954cb656d3828950e681be8c295e52a?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f954cb656d3828950e681be8c295e52a?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Bruno</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T08:00:55+00:00">May 15, 2017. 8:00 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>see here <a href="https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/" rel="nofollow">https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</a> </p>
+<p>Download English language security updates: Windows Server 2003 SP2 x64, Windows Server 2003 SP2 x86, Windows XP SP2 x64, Windows XP SP3 x86, Windows XP Embedded SP3 x86, Windows 8 x86, Windows 8 x64</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1025975#respond' onclick='return addComment.moveForm( "comment-1025975", "1025975", "respond", "78351" )' aria-label='Reply to Bruno'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt depth-2" id="comment-1022794">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/9cf8ea0578e833c5aae6f92053dc0efc?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/9cf8ea0578e833c5aae6f92053dc0efc?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Sam</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-14T01:21:36+00:00">May 14, 2017. 1:21 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I&#8217;m also a XP fan, but have not updated Kaspersky to the latest version for fear of it slowing down my machine, I think I have 2016 running still!!</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1022794#respond' onclick='return addComment.moveForm( "comment-1022794", "1022794", "respond", "78351" )' aria-label='Reply to Sam'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even depth-2" id="comment-1025742">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/639a403b6d2e406478ddb89994aac204?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/639a403b6d2e406478ddb89994aac204?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">AJ</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T05:38:31+00:00">May 15, 2017. 5:38 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>You can download Microsoft&#8217;s patch for XP (and 2003 and 8.0) from the links at the end of this Microsoft blog post: <a href="https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/" rel="nofollow">https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</a></p>
+<p>For XP SP3 in particular, you can download your language-specific patch here: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=55245" rel="nofollow">https://www.microsoft.com/en-us/download/details.aspx?id=55245</a></p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1025742#respond' onclick='return addComment.moveForm( "comment-1025742", "1025742", "respond", "78351" )' aria-label='Reply to AJ'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1022445">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/3eca3ae18139776a7bbe5a8da0a95191?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3eca3ae18139776a7bbe5a8da0a95191?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">David Goebel</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T20:13:20+00:00">May 13, 2017. 8:13 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>EternalBlue is SMBv1 only.</p>
+<p>I&#8217;ve seen the code for both the bug and the fix.</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1022445#respond' onclick='return addComment.moveForm( "comment-1022445", "1022445", "respond", "78351" )' aria-label='Reply to David Goebel'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1022565">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/2365f3fd72861791f734073d8b73b0fc?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2365f3fd72861791f734073d8b73b0fc?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Guud</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-13T21:55:06+00:00">May 13, 2017. 9:55 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I am a die harder guy with win95, not connected to internet. No AV whatsoever. I feel so safe&#8230;</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1022565#respond' onclick='return addComment.moveForm( "comment-1022565", "1022565", "respond", "78351" )' aria-label='Reply to Guud'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1023375">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/221dc6b4823a4c2d20098aec378954ff?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/221dc6b4823a4c2d20098aec378954ff?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Patrick</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-14T08:08:07+00:00">May 14, 2017. 8:08 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>I am a Linux user, but have also a family Windows laptop with KIS up-to-date, sharing files with a NAS,  am I “WannaCry” safe?<br />
+thanks</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1023375#respond' onclick='return addComment.moveForm( "comment-1023375", "1023375", "respond", "78351" )' aria-label='Reply to Patrick'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1026592">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/f7d56ad4f3bc0555dee7254b76c20330?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f7d56ad4f3bc0555dee7254b76c20330?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Vi Trieu Huynh</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-15T16:23:02+00:00">May 15, 2017. 4:23 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>THanks for the update! Really!</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1026592#respond' onclick='return addComment.moveForm( "comment-1026592", "1026592", "respond", "78351" )' aria-label='Reply to Vi Trieu Huynh'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1027294">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/67a6ce34d7bf1dafad463e4cddac60a7?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/67a6ce34d7bf1dafad463e4cddac60a7?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">pvirravi1116</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-16T07:07:49+00:00">May 16, 2017. 7:07 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>It&#8217;s true!! This Ransomware Attacks widespread all over the world. It&#8217;s provide here really good informative and helpful information!!</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1027294#respond' onclick='return addComment.moveForm( "comment-1027294", "1027294", "respond", "78351" )' aria-label='Reply to pvirravi1116'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1027880">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/65f19f1ef64f40e97ef803915c3980f8?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/65f19f1ef64f40e97ef803915c3980f8?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">William</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-16T16:55:18+00:00">May 16, 2017. 4:55 pm</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>At <a href="https://en.wikipedia.org/wiki/File_talk:Wana_Decrypt0r_screenshot.png" rel="nofollow">https://en.wikipedia.org/wiki/File_talk:Wana_Decrypt0r_screenshot.png</a> there is a discussion as to whether or not the screenshot is copyrightable.  In the Wikipedia article it has been deliberately reduced in resolution because of &#8220;fair use rationale.&#8221;</p>
+<p>Since the content was created by a criminal, is it even copyrightable, and if so could the owner even attempt legal action without getting arrested and convicted right on the spot?</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1027880#respond' onclick='return addComment.moveForm( "comment-1027880", "1027880", "respond", "78351" )' aria-label='Reply to William'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment odd alt thread-even depth-1" id="comment-1028660">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/ba0b597d7e27ef8df6cda40119c5aaf1?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ba0b597d7e27ef8df6cda40119c5aaf1?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">Cnditions Apply</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-17T07:00:43+00:00">May 17, 2017. 7:00 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>Thnk you !</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1028660#respond' onclick='return addComment.moveForm( "comment-1028660", "1028660", "respond", "78351" )' aria-label='Reply to Cnditions Apply'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-1041881">
+
+			<article itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+				<header class="comment-header">
+					<div class="comment-author">
+						<img alt='' src='https://secure.gravatar.com/avatar/ff3ab93c7a3bdb092d8e8ad14d8687f1?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ff3ab93c7a3bdb092d8e8ad14d8687f1?s=120&amp;d=mm&amp;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' itemprop="image"/><span itemprop="name">taklamakan</span> <span class="says"></span>
+						<div class="comment-meta commentmetadata">
+
+							Posted on							<time itemprop="commentTime" datetime="2017-05-28T03:54:51+00:00">May 28, 2017. 3:54 am</time>						</div><!-- .comment-meta -->
+
+					</div><!-- .comment-author -->
+				</header>
+
+				<div class="comment-content" itemprop="commentText">
+										<p>great</p>
+					<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/?replytocom=1041881#respond' onclick='return addComment.moveForm( "comment-1041881", "1041881", "respond", "78351" )' aria-label='Reply to taklamakan'>Reply</a></div><!-- .comment-reply -->				</div><!-- .comment-content -->
+
+			</article>
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/#respond" style="display:none;">Cancel Reply</a></small></h3>			<form action="https://securelist.com/wp-comments-post.php?wpe-comment-post=kasperskyhub" method="post" id="loginform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="comment-form-comment"><textarea id="comment" name="comment" style="width:100%" rows="8" aria-required="true" placeholder="Enter your comment here"></textarea></div><!-- .comment-form-comment --><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="form-submit"><input name="submit" type="submit" id="commentsubmit" class="submit" value="Submit" /> <input type='hidden' name='comment_post_ID' value='78351' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7653856a37" /></p><!-- the following input field has been added by the Honeypot Comments plugin to thwart spambots -->
+	<input type="hidden" id="8oQ9PRuNsQGdRCfVX7ID5vQNO" name="TE8f2X27XZZHJ9mpJjhUMbL2M" /><div class="g-recaptcha" data-sitekey="6Lfhf_8SAAAAAFOLFS54H1lR_oQ5pW_j7-h30oa1" data-theme="standard"></div><script type="text/javascript"src="https://www.google.com/recaptcha/api.js?hl=en"></script>            <div id="recaptcha-submit-btn-area">&nbsp;</div>
+            <noscript>
+            <style type='text/css'>#form-submit-save {display:none;}</style>
+            <input name="submit" type="submit" id="submit-alt" tabindex="6"
+                value="Submit Comment"/>
+            </noscript><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="184"/></p><p style="clear:both"><input style="width: 20px" type="checkbox" value="1" name="subscribe" id="subscribe"/>&nbsp;<label style="margin:0; padding:0; position:relative; left:0; top:0;" for="subscribe">Notify me when new comments are added.</label></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- .entry-comments -->
+
+	</div><!-- .col-4 -->
+
+
+			<div class="grid col-2">
+				<div id="secondary" class="right sidebar-wrap" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+
+		<div class="widget-area">
+		<div class="analysis-author"><div id="authors-wrap">
+		<div class="author-wrap">
+
+			<div class="left entry-author-thumbnail">
+				<a href="https://securelist.com/author/great/">
+					<img itemprop="image" src="https://cdn.securelist.com/wp-content/uploads/site-avatars/43/312/1422369199-bporiginal-90x90.jpg" alt="" class=" avatar  avatar-90  photo user-312-avatar" width="90" height="90" />				</a>
+			</div>
+
+			<ul class="left entry-author-meta">
+
+				<li class="entry-nickname">
+					<a href="https://securelist.com/author/great/">
+						GReAT					</a>
+				</li>
+
+									<li class="entry-description">
+						Kaspersky Lab&#039;s Global Research &amp; Analysis Team					</li>
+				
+									<li class="entry-twitter">
+						<a href="http://twitter.com/e_kaspersky/great" class="white">
+							<span class="left ico-twitter"></span>
+							<span class="name-twitter">@e_kaspersky<wbr>/great</span>
+						</a>
+					</li>
+				
+			</ul>
+
+		</div>
+
+	</div></div><aside id="related_recent_posts-2" class="widget widget_related_recent_posts"><h3 class="widget-title"></h3><ul class="related-recent">				<li><a href="https://securelist.com/ksn-report-ransomware-in-2016-2017/78824/" title="KSN Report: Ransomware in 2016-2017">KSN Report: Ransomware in 2016-2017</a></li>
+							<li><a href="https://securelist.com/dridex-a-history-of-evolution/78531/" title="Dridex: A History of Evolution">Dridex: A History of Evolution</a></li>
+							<li><a href="https://securelist.com/exploits-how-great-is-the-threat/78125/" title="Exploits: how great is the threat?">Exploits: how great is the threat?</a></li>
+							<li><a href="https://securelist.com/a-look-into-the-russian-speaking-ransomware-ecosystem/77544/" title="A look into the Russian-speaking ransomware ecosystem">A look into the Russian-speaking ransomware ecosystem</a></li>
+							<li><a href="https://securelist.com/threat-intelligence-report-for-the-telecommunications-industry/75846/" title="Threat intelligence report for the telecommunications industry">Threat intelligence report for the telecommunications industry</a></li>
+							<li><a href="https://securelist.com/ksn-report-mobile-ransomware-in-2014-2016/75183/" title="KSN Report: Mobile ransomware in 2014-2016">KSN Report: Mobile ransomware in 2014-2016</a></li>
+						</ul></aside><div class="widget-pusher"></div><aside id="text-17" class="widget widget_text">			<div class="textwidget"><a href="https://kas.pr/tDD2" target="_blank"><img src="https://cdn.securelist.com/files/2017/06/cryptor_360_EN.png" width="360" height="340"></a></div>
+		</aside><aside id="promo_boxes-2" class="widget widget_promo_boxes"><h3 class="widget-title"></h3><div class="promo-box-wrap">
+			</div><!-- .promo-box-wrap -->
+
+		</aside><aside id="readers_feedback-2" class="widget widget_readers_feedback"><h3 class="widget-title">Readers Feedback</h3>
+		<div class="readers-feedback-wrap">
+			<div class="readers-feedback">
+			<div class="social-likes" data-title="WannaCry ransomware used in widespread attacks all over the world" data-url="https://securelist.com/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/78351/" data-counters="yes" data-zeroes="yes"><div class="facebook" title="Share via Facebook">Facebook</div>
+<div class="plusone" title="Share via Google">Google</div>
+<div class="twitter" title="Share via Twitter">Twitter</div></div>			</div>
+		</div><!-- .readers-feedback-wrap -->
+
+		</aside>		</div><!-- .widget-area -->
+	</div><!-- #secondary -->
+	</div>
+	</div>
+
+</article><!-- #post -->
+
+
+		</main><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main -->
+		<footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="grid col-3">
+				<div id="tertiary" class="sidebar-container" role="complementary">
+					<div class="sidebar-inner">
+						<div class="widget-area">
+							<aside id="text-6" class="widget widget_text">			<div class="textwidget"><div class="site-info">
+<span class="logo-footer"></span>
+<br><br>
+<p>© 2017 <a href="http://www.kaspersky.com">AO Kaspersky Lab.</a>
+All Rights Reserved. Registered trademarks and service marks are the property of their respective owners.</p>
+
+<a href="/contacts">Contact us</a> | <a href="http://www.kaspersky.com/privacy">Read our privacy policy</a>
+</div><!-- .site-info --></div>
+		</aside>						</div><!-- .widget-area -->
+					</div><!-- .sidebar-inner -->
+				</div><!-- #tertiary -->
+			</div>
+
+			<div class="grid col-2 right">
+				<div id="tertiary" class="sidebar-container" role="complementary">
+					<div class="sidebar-inner">
+						<div class="widget-area">
+							<aside id="social_icons-3" class="widget widget_social_icons"><h3 class="widget-title"></h3><div class="social-icons-wrap"><ul class="social-icons"><li class="social-icon twitter"><a href="https://twitter.com/Securelist" target="_blank">Twitter</a></li><li class="social-icon facebook"><a href="https://www.facebook.com/securelist" target="_blank">Facebook</a></li><li class="social-icon google"><a href="https://plus.google.com/+KasperskyLab" target="_blank">Google+</a></li><li class="social-icon linkedin"><a href="https://www.linkedin.com/company/kaspersky-lab" target="_blank">LinkedIn</a></li><li class="social-icon youtube"><a href="http://www.youtube.com/securelist" target="_blank">YouTube</a></li><li class="social-icon rss"><a href="//securelist.com/feed/" target="_blank">RSS</a></li><li class="social-icon email"><a href="//securelist.com/contacts/">Email</a></li></ul></div><!-- .social-icons-wrap --></aside><aside id="search-3" class="widget widget_search"><form role="search" class="searchform" action="https://securelist.com" method="get">
+    <fieldset>
+        <input type="text" name="s" class="search" value="Search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+        <input type="submit" class="form-button" alt="Search" />
+            </fieldset>
+</form>
+</aside>						</div><!-- .widget-area -->
+					</div><!-- .sidebar-inner -->
+				</div><!-- #tertiary -->
+			</div>
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('ntt0i', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=ntt0i&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=ntt0i&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript><script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script>            <script type="text/javascript">
+            if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                document.getElementById('comment').value =
+                    _recaptcha_wordpress_savedcomment;
+            }
+            </script><script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/securelist.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js,wp-content/plugins/wds-no-login-autocomplete/js/script.js,wp-content/plugins/wds-securelist-widgets/js/jquery.mousewheel.js,wp-content/plugins/wds-securelist-widgets/js/jquery.antiscroll.js,wp-content/themes/securelist/js/jquery.tinycarousel.min.js,wp-content/plugins/wds-securelist-widgets/js/securelist-plugin-scripts.js,wp-includes/js/jquery/ui/core.min.js,wp-content/themes/securelist/js/jquery.magnific-popup.min.js,wp-content/themes/securelist/js/jquery.bpopup.min.js,wp-content/themes/securelist/js/jquery.slides.js&#038;ver=1492409688'></script>
+<script type='text/javascript' src='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/securelist/js/jquery.flexslider-min.js,wp-content/themes/securelist/js/jquery.truncate.min.js,wp-content/themes/securelist/js/jquery.flexnav.min.js,wp-content/themes/securelist/js/jquery.sticky.js,wp-content/themes/securelist/js/doubletaptogo.min.js,wp-content/themes/securelist/js/hammer.min.js,wp-content/themes/securelist/js/jquery.tosrus.min.all.js,wp-content/themes/securelist/js/functions.js,wp-includes/js/comment-reply.min.js,wp-content/plugins/kaspersky-tracking/js/external-tracking.js&#038;ver=1492409688'></script>
+<script type='text/javascript' src='https://cdn.securelist.com/wp-content/plugins/bwp-minify/min/?f=wp-includes/js/wp-embed.min.js,wp-content/plugins/akismet/_inc/form.js&#038;ver=1492409688'></script>
+
+
+<!-- Powered by Whitelist IP For Limit Login Attempts | URL: http://club.orbisius.com/products/wordpress-plugins/whitelist-ip-for-limit-login-attempts/ -->
+
+</body>
+</html>

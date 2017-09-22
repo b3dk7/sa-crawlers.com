@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Sentiment Analysis for the keyword "WannaCry"</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ["Company", "Sentiment"],
+          ["Kaspersky",2.89],
+["Symantec",2.8],
+["Proofpoint",2.0],
+["Cisco",1.0],
+["IBM",0.9]
+        ]);
+
+        var options = {
+          title: 'Companies orderd by amount of sentiment points'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+
+    </script>
+
+    
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- custom css -->
+    <link href="css/ziwayo.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sentiment Analysis for the keyword "WannaCry"</h1>
+      <h2>Summary</h2>
+	<div id="piechart" style="width: 900px; height: 500px;"></div>
+
+
+
+      
+      
+      
+      
+      <h2>Coverage of the web crawler</h2>
+      <div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h4 class="panel-title">
+	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">List of companies searched for</a>
+	    </h4>
+	  </div>
+	  <div id="collapse1" class="panel-collapse collapse">
+	    <div class="panel-body">Kaspersky, Symantec, Proofpoint, Cisco, IBM</div>
+	  </div>
+	</div>
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h4 class="panel-title">
+	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">List of articles analysed</a>
+	    </h4>
+	  </div>
+	  <div id="collapse2" class="panel-collapse collapse">
+	    <div class="panel-body"><a href=https://techcrunch.com/2017/08/07/marcus-hutchins-legal-defense-fund-malwaretech/>WannaCry hero heads into Tuesday hearing as the security community crowdfunds his defense  |  TechCrunch</a><br><a href=https://www.forbes.com/sites/thomasbrewster/2017/08/06/marcus-hutchins-case-kronos-malware-not-hot-in-cybercrime/>Kronos Malware 'Dealer' On WannaCry Killer Charges: What Charges?</a><br><a href=http://malware.wikia.com/wiki/WannaCry>WannaCry | Malware Wiki | FANDOM powered by Wikia</a><br><a href=https://www.theguardian.com/technology/2017/aug/03/researcher-who-stopped-wannacry-ransomware-detained-in-us>Briton who stopped WannaCry attack arrested over separate malware claims | Technology | The Guardian</a><br><a href=https://en.wikipedia.org/wiki/WannaCry_ransomware_attack>WannaCry ransomware attack - Wikipedia</a><br><a href=https://arstechnica.com/gadgets/2017/08/researchers-say-wannacry-operator-moved-bitcoins-to-untraceable-monero/>Researchers say WannaCry operator moved bitcoins to “untraceable” Monero | Ars Technica</a><br><a href=https://www.theguardian.com/technology/2017/aug/04/wannacry-marcus-hutchins-kronos-malware-arrest>WannaCry 'hero' to plead not guilty to accusation he wrote banking malware | Technology | The Guardian</a><br><a href=https://motherboard.vice.com/en_us/article/ywp8k5/researcher-who-stopped-wannacry-ransomware-detained-in-us-after-def-con>Researcher Who Stopped WannaCry Ransomware Detained in US After Def Con - Motherboard</a><br><a href=https://securelist.com/blog/incidents/78351/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/>WannaCry ransomware used in widespread attacks all over the world - Securelist</a><br><a href=https://de.wikipedia.org/wiki/WannaCry>WannaCry – Wikipedia</a><br><a href=http://www.telegraph.co.uk/technology/2017/08/03/fbi-arrests-wannacry-hero-marcus-hutchins-las-vegas-reports/>WannaCry hero Marcus Hutchins could face 40 years in US prison</a><br></div>
+	  </div>
+	</div>
+	
+      </div> 
+      
+      
+      <h2>Breakdown of sentiment analysis for each company</h2>
+      <div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#Kaspersky">1. Kaspersky - Total score: 2.89</a>
+	</h4>
+      </div>
+      <div id="Kaspersky" class="panel-collapse collapse">
+	<div class="panel-body"><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#0">
+	      WannaCry ransomware attack - Wikipedia [1.0 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="0" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Cybersecurity companies Kaspersky Lab and Symantec have both said the code has some similarities with that previously used by the Lazarus Group (believed to have carried out the cyberattack on Sony Pictures in 2014 and a Bangladesh bank heist in 2016—and linked to North Korea). This could also be either simple re-use of code by another group or an attempt to shift blame—as in a cyber false flag operation; but a leaked internal NSA memo is alleged to have also linked the creation of the worm to North Korea.</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>Organizations that had not installed Microsoft's security update were affected by the attack. Those still running the older Windows XP were at particularly high risk because no security patches had been released since April 2014 (with the exception of one emergency patch released in May 2014). However, on the day after the outbreak, an emergency, out-of-band security update was released for XP and Windows Server 2003. A Kaspersky Labs study reported that less than 0.1 percent of the affected computers were running Windows XP, and that 98 percent of the affected computers were running Windows 7. In a controlled testing environment, the cybersecurity firm Kryptos Logic found that they were unable to infect a Windows XP system with WannaCry using just the exploits, as the payload failed to load, or caused the operating system to crash rather than actually execute and encrypt files. However, when executed manually, WannaCry could still operate on Windows XP.</td>
+	  <td>1</td>
+	</tr><tr>
+	  <td>The ransomware campaign was unprecedented in scale according to Europol, which estimates that around 200,000 computers were infected across 150 countries. According to Kaspersky Lab, the four most affected countries were Russia, Ukraine, India and Taiwan.</td>
+	  <td>1.1</td>
+	</tr></table></div>
+	</div>
+      </div><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#1">
+	      WannaCry ransomware used in widespread attacks all over the world - Securelist [0.99 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="1" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Quite essential in stopping these attacks is the Kaspersky System Watcher component. The System Watcher component has the ability to rollback the changes done by ransomware in the event that a malicious sample managed to bypass other defenses. This is extremely useful in case a ransomware sample slips past defenses and attempts to encrypt the data on the disk.</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>KSWS (Kaspersky Security for Windows Servers) will monitor file shares on the server it is installed on using the Anti-Cryptor component if it is enabled. Should it detect an encryption algorithm being performed on contents of a file share by another endpoint, it will sever the network connection to that endpoint for an hour.</td>
+	  <td>1</td>
+	</tr><tr>
+	  <td>Phew, good thing I have Kaspersky installed 🙂</td>
+	  <td>1</td>
+	</tr><tr>
+	  <td>yes, I am used Kaspersky internet security-2017 past 4 years. it is everthing ok. well protected my computer.</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>To decrypt files changed by ransomware is not an easy task. It usually requires access to the encryption key. Whether someones shares this key, they find it during analysis, or just due to sloppy programming from the ransomwares author.Either way, if a key is found, Kaspersky Lab makes decryption tools and they are all free. You can find existing ones on the website nomoreransom.org</td>
+	  <td>1.1</td>
+	</tr><tr>
+	  <td>I am a Kaspersky user.  Do I get protected even I didn’t update the Windows patch?  I tried to update but it kept saying ‘searching for updates on this computer’ for more than half an hour.</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>      Please don’t rely on Kaspersky, the virus could slip though in a second, or when you open up an attachment you shouldn’t.</td>
+	  <td>1.1</td>
+	</tr><tr>
+	  <td>Regarding protection from this malware using Kaspersky Lab solutions. Yes, you are protected. On top of this, this malware normally gains access to a computer via the user opening an attachment in a spam email. If you don’t know the sender, don’t open the attachment. Even if you know the sender, if you aren’t expecting a file, don’t open it.The other way it can infect your machine is if you are unpatched and someone else using the same network opens the email. Say a family member for example.Keep persisting with Windows Updates, they can take a while, but should work eventually.If your windows updates were applied and you had up to date Kaspersky Lab software, you had nothing at all to worry about.</td>
+	  <td>1</td>
+	</tr><tr>
+	  <td>I’m also a XP fan, but have not updated Kaspersky to the latest version for fear of it slowing down my machine, I think I have 2016 running still!!</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>© 2017 AO Kaspersky Lab.All Rights Reserved. Registered trademarks and service marks are the property of their respective owners.</td>
+	  <td>1.1</td>
+	</tr></table></div>
+	</div>
+      </div><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#2">
+	      WannaCry – Wikipedia [0.9 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="2" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Die Sicherheitsfirmen Kaspersky Lab und Symantec gaben am 15. Mai 2017 bekannt, dass sie Teile des Codes, mit dem frühe Versionen der Schadsoftware programmiert wurden, der Lazarus-Gruppe zuordnen, einer Gruppierung, von der angenommen wird, dass sie im staatlichen Auftrag von Nordkorea operiert. Beide Unternehmen betonen, dass es sich bei ihren Erkenntnissen bloß um Indizien handelt, die weit davon entfernt sind, beweiskräftig zu sein.</td>
+	  <td>0.9</td>
+	</tr></table></div>
+	</div>
+      </div></div>
+      </div>
+    </div><div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#Symantec">2. Symantec - Total score: 2.8</a>
+	</h4>
+      </div>
+      <div id="Symantec" class="panel-collapse collapse">
+	<div class="panel-body"><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#3">
+	      WannaCry hero heads into Tuesday hearing as the security community crowdfunds his defense  |  TechCrunch [0.9 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="3" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>With a hearing set for Tuesday in Wisconsin, Hutchins’ many supporters have rallied to donate toward covering his legal costs. The fund was set up by former Symantec Cybersecurity Czar Tarah Wheeler and the tech law firm of Tor Ekeland.</td>
+	  <td>0.9</td>
+	</tr></table></div>
+	</div>
+      </div><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#4">
+	      WannaCry ransomware attack - Wikipedia [0.95 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="4" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Several organizations released detailed technical writeups of the malware, including Microsoft, Cisco, Malwarebytes, Symantec and McAfee.</td>
+	  <td>1</td>
+	</tr><tr>
+	  <td>Cybersecurity companies Kaspersky Lab and Symantec have both said the code has some similarities with that previously used by the Lazarus Group (believed to have carried out the cyberattack on Sony Pictures in 2014 and a Bangladesh bank heist in 2016—and linked to North Korea). This could also be either simple re-use of code by another group or an attempt to shift blame—as in a cyber false flag operation; but a leaked internal NSA memo is alleged to have also linked the creation of the worm to North Korea.</td>
+	  <td>0.9</td>
+	</tr></table></div>
+	</div>
+      </div><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#5">
+	      WannaCry – Wikipedia [0.95 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="5" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Die Sicherheitsfirmen Kaspersky Lab und Symantec gaben am 15. Mai 2017 bekannt, dass sie Teile des Codes, mit dem frühe Versionen der Schadsoftware programmiert wurden, der Lazarus-Gruppe zuordnen, einer Gruppierung, von der angenommen wird, dass sie im staatlichen Auftrag von Nordkorea operiert. Beide Unternehmen betonen, dass es sich bei ihren Erkenntnissen bloß um Indizien handelt, die weit davon entfernt sind, beweiskräftig zu sein.</td>
+	  <td>0.9</td>
+	</tr><tr>
+	  <td>Der Programmcode von WannaCry sieht vor, für jeden befallenen Computer eine individuelle Bitcoin-Adresse zu generieren. Damit können eingegangene Lösegelder dem Rechner zugeordnet und die Entschlüsselungscodes an die Opfer übermittelt werden. Aufgrund eines sogenannten „kritischen Wettlauffehlers“ versagt jedoch die Erzeugung individueller Bitcoin-Adressen, stattdessen findet ein Rückgriff auf eine von drei festen Bitcoin-Adressen statt. Es ist dann davon auszugehen, dass die Täter nicht erkennen können, ob für einen bestimmten gekaperten Computer das Lösegeld entrichtet wurde. Die Sicherheitsfirma Symantec geht deshalb davon aus, dass Lösegeldzahlungen nicht zum Erfolg führen. Nach anderen Angaben hingegen führten einige Zahlungen zur Entschlüsselung, nachdem sie manuell ausgehandelt wurden. Bei späteren Varianten der Malware, die aber geringe Ausbreitung erreichten, wurde der Programmfehler behoben.</td>
+	  <td>1</td>
+	</tr></table></div>
+	</div>
+      </div></div>
+      </div>
+    </div><div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#Proofpoint">3. Proofpoint - Total score: 2.0</a>
+	</h4>
+      </div>
+      <div id="Proofpoint" class="panel-collapse collapse">
+	<div class="panel-body"><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#6">
+	      Briton who stopped WannaCry attack arrested over separate malware claims | Technology | The Guardian [1.1 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="6" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>The security researcher Ryan Kalember, from Proofpoint, says that the Kronos malware was notable for being a particularly slick, and expensive, offering. “It had nice remote administration, with a dashboard panel, and it was quite good at evading attention by antivirus products,” he said. It was sold on malware forums for prices of up to $7,000 (£5,330), according to Kalember; the indictment against Hutchins lists prices of $2,000 (£1,523) and $3,000 (£2,284).</td>
+	  <td>1.1</td>
+	</tr></table></div>
+	</div>
+      </div><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#7">
+	      WannaCry 'hero' to plead not guilty to accusation he wrote banking malware | Technology | The Guardian [0.9 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="7" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>The cybersecurity researcher, working with Darien Huss from security firm Proofpoint, found and inadvertently activated a “kill switch” in the malicious software. </td>
+	  <td>0.9</td>
+	</tr></table></div>
+	</div>
+      </div></div>
+      </div>
+    </div><div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#Cisco">4. Cisco - Total score: 1.0</a>
+	</h4>
+      </div>
+      <div id="Cisco" class="panel-collapse collapse">
+	<div class="panel-body"><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#8">
+	      WannaCry ransomware attack - Wikipedia [1 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="8" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>Several organizations released detailed technical writeups of the malware, including Microsoft, Cisco, Malwarebytes, Symantec and McAfee.</td>
+	  <td>1</td>
+	</tr></table></div>
+	</div>
+      </div></div>
+      </div>
+    </div><div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#IBM">5. IBM - Total score: 0.9</a>
+	</h4>
+      </div>
+      <div id="IBM" class="panel-collapse collapse">
+	<div class="panel-body"><div class="panel panel-default">
+	<div class="panel-heading pink_blocks">
+	  <h4 class="panel-title pink_blocks">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#9">
+	      Kronos Malware 'Dealer' On WannaCry Killer Charges: What Charges? [0.9 Points]
+	    </a>
+	  </h4>
+	</div>
+	<div id="9" class="panel-collapse collapse">
+	  <div class="panel-body"><table>
+	<tr>
+	  <th>Paragraph</th>
+	  <th>Sentiment Score</th>
+	</tr><tr>
+	  <td>But Kronos didn't turn into much. In the last 24 months, according to IBM global executive security advisor Limor Kessem, the Trojan emerged with a hefty $7,000 price tag in mid-2014, but actual attacks didn't launch until the third and fourth quarter of 2015, when the company saw some Kronos malware campaigns hitting UK banks. "But after that timeframe, have not seen much more activity from the malware," Kessem told Forbes.</td>
+	  <td>0.9</td>
+	</tr></table></div>
+	</div>
+      </div></div>
+      </div>
+    </div>
+      </div>
+	
+      </div> 
+      
+      
+      
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
