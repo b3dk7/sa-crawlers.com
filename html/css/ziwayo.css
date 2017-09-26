@@ -1,3 +1,8 @@
-.pink_blocks {
-  background-color: yellow;
+.panel-default > .panel-heading-custom {
+    background: #68644A; color: #fff;
 }
+.highlight-match{
+  color: #613763;
+  font-weight: bold;
+}
+  

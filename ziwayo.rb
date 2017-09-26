@@ -105,6 +105,12 @@ def ai_points(points)
 end
 
 
+def find_word(para, word)
+  return para.scan(/[\t\r\ \n\(]#{word}[\-\'\.\ \,\n\)\!\?]/)
+end
+
+
+
 def create_doc(html_dir, list_of_companies)
   array_of_companies = csv_to_array(list_of_companies)
   articles = ''
@@ -133,7 +139,8 @@ def create_doc(html_dir, list_of_companies)
       next if extract_domain(link).include? remove_spaces_downcase(company)
       array_of_references = []
       for para in 0 ... paragraphs.size
-	if paragraphs[para].scan(/[\t\r\ \n\(]#{company}[\-\'\.\ \,\n\)\!\?]/).count > 0
+	#if paragraphs[para].scan(/[\t\r\ \n\(]#{company}[\-\'\.\ \,\n\)\!\?]/).count > 0
+	if find_word(paragraphs[para],company).count > 0
 	  #this is where we need to run AI on each paragraph
 	  # Create an instance for usage
 	  analyzer = Sentimental.new
@@ -191,7 +198,8 @@ def create_doc(html_dir, list_of_companies)
       
       #puts article
       
-      para_table = '<table>
+      
+      para_table = '<table class="table table-bordered">
 	<tr>
 	  <th>Paragraph</th>
 	  <th>Sentiment Score</th>
@@ -199,8 +207,11 @@ def create_doc(html_dir, list_of_companies)
       
       
       article[:paragraphs].each do |para|
+	
+	highlight_company = find_word(para[:paragraph],company[0])[0]
+	
 	para_table << '<tr>
-	  <td>'+para[:paragraph]+'</td>
+	  <td>'+para[:paragraph].sub(highlight_company,'<div class="highlight-match">'+highlight_company+'</div>')+'</td>
 	  <td>'+para[:sentiment].to_s+'</td>
 	</tr>'
 	
@@ -210,7 +221,7 @@ def create_doc(html_dir, list_of_companies)
       
       
       article_html << '<div class="panel panel-default">
-	<div class="panel-heading pink_blocks">
+	<div class="panel-heading panel-heading-custom">
 	  <h4 class="panel-title pink_blocks">
 	    <a data-toggle="collapse" data-parent="#accordion" href="#'+article_id.to_s+'">
 	      '+article[:article_title]+' ['+article[:average_article_score].to_s+' Points]
@@ -218,7 +229,7 @@ def create_doc(html_dir, list_of_companies)
 	  </h4>
 	</div>
 	<div id="'+article_id.to_s+'" class="panel-collapse collapse">
-	  <div class="panel-body">'+para_table+'</div>
+	  <div class="panel-body"><a href='+article[:article_url]+'>view page</a>'+para_table+'</div>
 	</div>
       </div>'
       
