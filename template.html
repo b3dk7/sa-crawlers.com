@@ -19,7 +19,7 @@
         ]);
 
         var options = {
-          title: 'Companies orderd by amount of sentiment points'
+          title: 'Companies orderd by their amount of sentiment points'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -78,6 +78,7 @@
       
       
       <h2>Breakdown of sentiment analysis for each company</h2>
+      <p>Sentiment points are a function of the amount of references as well as an artificial intelligence score provided by <a href=https://textblob.readthedocs.io/en/dev/#>TextBlob</a></p>
       <div class="panel-group" id="accordion">
 	ziwayo{company_details}
       </div>

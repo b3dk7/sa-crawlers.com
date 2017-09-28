@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'sanitize'
 require 'json'
 require 'sentimental'
+require 'yaml'
 
 oops = 'oops, you seem to be missing arguments'
 $html_title = 'Sentiment Analysis for the keyword "WannaCry"'
@@ -111,69 +112,99 @@ end
 
 
 
+
+def save(data, path)
+  File.open(path, "w+") do |f|
+    f << data.to_json
+  end
+end
+
+
 def create_doc(html_dir, list_of_companies)
   array_of_companies = csv_to_array(list_of_companies)
   articles = ''
   results = {}
   index = 0
   
-  Dir.foreach(html_dir) do |item|
-    next if item == '.' or item == '..'
-    #puts "processing document " + index.to_s
-    index=index+1
-    item_location = html_dir+'/'+item
-    html_file = File.open(item_location)
-    link = html_file.read.lines.first.gsub('<!--','').gsub('-->','').gsub("\n",'')
-    article_noko = Nokogiri::HTML(open(html_file))
-    raw_title = article_noko.css('title')
-    if raw_title.size > 1
-      title = raw_title[0].text
-    else
-      title = raw_title.text
-    end
-    articles << '<a href='+link+'>'+title+'</a><br>'
-    paragraphs = get_p(article_noko)    
-    for i in 0 ... array_of_companies.size
-      company = array_of_companies[i]
-      #plese test the line below - this code is used so that company-x.com references are not valid for company-x. So nobody gets to blow their own horn
-      next if extract_domain(link).include? remove_spaces_downcase(company)
-      array_of_references = []
-      for para in 0 ... paragraphs.size
-	#if paragraphs[para].scan(/[\t\r\ \n\(]#{company}[\-\'\.\ \,\n\)\!\?]/).count > 0
-	if find_word(paragraphs[para],company).count > 0
-	  #this is where we need to run AI on each paragraph
-	  # Create an instance for usage
-	  analyzer = Sentimental.new
-	  # Load the default sentiment dictionaries
-	  analyzer.load_defaults
-	  points = ai_points(analyzer.score paragraphs[para])
-	  
-	  array_of_references << {:paragraph => paragraphs[para], :sentiment => points}
-	end
+  #create results has in case we are not supplying one via command line
+  if  ARGV[4].nil?
+    doc_counter = 0
+    Dir.foreach(html_dir) do |item|
+      next if item == '.' or item == '..'
+      doc_counter+=1
+      puts "processing document "+doc_counter
+      
+      #puts "processing document " + index.to_s
+      index=index+1
+      item_location = html_dir+'/'+item
+      html_file = File.open(item_location)
+      link = html_file.read.lines.first.gsub('<!--','').gsub('-->','').gsub("\n",'')
+      article_noko = Nokogiri::HTML(open(html_file))
+      raw_title = article_noko.css('title')
+      if raw_title.size > 1
+	title = raw_title[0].text
+      else
+	title = raw_title.text
       end
-      if array_of_references.size > 0
-	if results[company].nil?
-	  results[company] = {:sa_score => 1,:articles => []}
+      articles << '<a href='+link+'>'+title+'</a><br>'
+      paragraphs = get_p(article_noko)    
+      for i in 0 ... array_of_companies.size
+	company = array_of_companies[i]
+	#bias protection
+	next if extract_domain(link).include? remove_spaces_downcase(company)
+	array_of_references = []
+	for para in 0 ... paragraphs.size
+	  #if paragraphs[para].scan(/[\t\r\ \n\(]#{company}[\-\'\.\ \,\n\)\!\?]/).count > 0 
+	  if find_word(paragraphs[para],company).count > 0 && 
+	    #this is where we need to run AI on each paragraph
+	    # Create an instance for usage
+	    analyzer = Sentimental.new
+	    # Load the default sentiment dictionaries
+	    analyzer.load_defaults
+	    #points = ai_points(analyzer.score paragraphs[para])
+	    points = (`python TextBlob.py "#{paragraphs[para].gsub('"', "'")}"`.to_f + 1).round(2)
+	    array_of_references << {:paragraph => paragraphs[para], :sentiment => points}
+	  end
 	end
-	average_points = 0 
-	array_of_references.each do |i|
-	  #average_points = i[:sentiment]
-	  average_points = average_points + i[:sentiment]
-	end
-	average_points = average_points / array_of_references.size
-	results[company][:articles] << {:article_title => title, :article_url => link, :average_article_score => average_points, :paragraphs => array_of_references}
-      end	
+	#we check that there are less than 4 references of  the company name, in order to filter out biased articles
+	if array_of_references.size > 0 && array_of_references.size < 4
+	  if results[company].nil?
+	    results[company] = {:sa_score => 1,:articles => []}
+	  end
+	  average_points = 0 
+	  array_of_references.each do |i|
+	    #average_points = i[:sentiment]
+	    average_points = average_points + i[:sentiment]
+	  end
+	  average_points = average_points / array_of_references.size
+	  results[company][:articles] << {:article_title => title, :article_url => link, :average_article_score => average_points.round(2), :paragraphs => array_of_references}
+	end	
+      end
+      #File.write('last_result.hash', results.to_yaml)
+      
     end
+    
+    # Now the results hash is full and we can give scores to each company
+    results.each do |company|
+      average_company_score = 0.0
+      company[1][:articles].each do |article|
+	average_company_score = average_company_score + article[:average_article_score]
+      end
+      results[company[0]][:sa_score] = average_company_score
+    end
+    
+    File.open("last_result.hash", "w"){|to_file| Marshal.dump(results, to_file)}
+  else
+    #results = save(data, path)
+    results = File.open(ARGV[4], "r"){|from_file| Marshal.load(from_file)}
+	#YAML.load_file(ARGV[3])
   end
   
-  # Now the results hash is full and we can give scores to each company
-  results.each do |company|
-    average_company_score = 0.0
-    company[1][:articles].each do |article|
-      average_company_score = average_company_score + article[:average_article_score]
-    end
-    results[company[0]][:sa_score] = average_company_score
-  end
+  
+  #puts results
+  
+  
+  
   #now we can create our html file
   html_file = File.open('template.html').read
   results = sort_results(results)
@@ -211,7 +242,7 @@ def create_doc(html_dir, list_of_companies)
 	highlight_company = find_word(para[:paragraph],company[0])[0]
 	
 	para_table << '<tr>
-	  <td>'+para[:paragraph].sub(highlight_company,'<div class="highlight-match">'+highlight_company+'</div>')+'</td>
+	  <td>'+para[:paragraph].sub(highlight_company,'<span class="highlight-match">'+highlight_company+'</span>')+'</td>
 	  <td>'+para[:sentiment].to_s+'</td>
 	</tr>'
 	
@@ -249,7 +280,7 @@ def create_doc(html_dir, list_of_companies)
     company_details << '<div class="panel panel-default">
       <div class="panel-heading">
 	<h4 class="panel-title">
-	  <a data-toggle="collapse" data-parent="#accordion" href="#'+company[0]+'">'+company_html+'</a>
+	  <a data-toggle="collapse" data-parent="#accordion" href="#'+company[0]+'"><b>'+company_html+'</b></a>
 	</h4>
       </div>
       <div id="'+company[0]+'" class="panel-collapse collapse">
@@ -268,7 +299,8 @@ def create_doc(html_dir, list_of_companies)
   html_file = html_file.sub('ziwayo{company_details}',company_details)
   html_file = html_file.gsub('ziwayo{title}',$html_title)
   #output
-  puts html_file
+  #puts html_file
+  File.write(ARGV[3], html_file)
 end
 
 
@@ -283,7 +315,7 @@ def help()
   puts 'the options are:'
   puts ' - download_links [your+search+terms] [number of links you want (must be multiple of 10)]'
   puts ' - download_html [list of links] [destination directory]'
-  puts ' - create_doc [directory cointing html files to be searched] [csv file containing companie names to search for]'
+  puts ' - create_doc [directory cointing html files to be searched] [csv file containing companie names to search for] [output file name] [OPTIONAL results hash]'
 end
 
 
