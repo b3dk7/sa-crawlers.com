@@ -5,6 +5,7 @@ require 'sanitize'
 require 'json'
 require 'sentimental'
 require 'yaml'
+require 'date'
 
 oops = 'oops, you seem to be missing arguments'
 $html_title = 'Sentiment Analysis for the keyword "WannaCry"'
@@ -17,14 +18,27 @@ def get_links(location, pages_to_crawl)
   b = Watir::Browser.new :chrome
   b.goto(location)
   for x in 0...pages_to_crawl
-    for y in 1..10
-      link = b.link id: 'title_'+(x*10+y).to_s
-      puts link.href    
+    begin
+      for y in 1..10
+	link = b.link id: 'title_'+(x*10+y).to_s
+	list_of_links << link.href    
+      end
+      nxt = b.link href: 'javascript:document.nextform.submit();'
+      nxt.exists?
+      nxt.click
+    rescue
+      break
     end
-    nxt = b.link href: 'javascript:document.nextform.submit();'
-    nxt.exists?
-    nxt.click
   end
+  
+  
+  puts list_of_links.uniq
+  
+end
+
+
+def html_happy(str)
+  return str.gsub(" ","-")
 end
 
 #creates appropriate GET request
@@ -48,23 +62,41 @@ def down_html_from_links_open_uri(links, dir_name)
   Dir.mkdir dir_name unless Dir.exist?(dir_name)
   # problem_links are links that we were not able to download using open-uri for whatever reason
   problem_links = []
-  b = Watir::Browser.new :chrome
+  
   for i in 0...links.length
-    link = links[i].first
+    link = links[i]
     begin
     html_file = "<!--"+link+"-->\n" + open(link).read
     File.write(dir_name+'/'+i.to_s+'.html', html_file)
     puts 'downloaded index'+i.to_s
     rescue
-      puts "problem with link "+link+" .. will try to download in Watir"
-      begin
-	b.goto(link)
-	html_file = "<!--"+link+"-->\n" + b.html
-	File.write(dir_name+'/'+i.to_s+'.html', html_file)
-      rescue
-      end
+      puts "problem with link "+link+" .. will try to download it later using Watir"
+      problem_links << [link, (dir_name+'/'+i.to_s+'.html')]
     end
   end
+  
+  
+  #now waitr kicks in
+  #b = Watir::Browser.new :chrome, :switches => %w[--ignore-certificate-errors --disable-popup-blocking --disable-translate --proxy-server=myproxy.com:8080]
+  
+  b = Watir::Browser.new :chrome
+  #b.driver.manage.timeouts.implicit_wait = 6
+  for i in 0...problem_links.length
+    begin
+      Timeout::timeout(6) do
+	puts "downloading "+problem_links[i][1]
+	b.goto(problem_links[i][0])
+	html_file = "<!--"+link+"-->\n" + b.html
+	File.write(problem_links[i][1], html_file)
+      end
+    rescue
+      puts "not able to download: "+problem_links[i][0]
+    end
+  end
+  
+  
+  
+  
 end
 
 
@@ -132,7 +164,7 @@ def create_doc(html_dir, list_of_companies)
     Dir.foreach(html_dir) do |item|
       next if item == '.' or item == '..'
       doc_counter+=1
-      puts "processing document "+doc_counter
+      puts "processing document "+doc_counter.to_s
       
       #puts "processing document " + index.to_s
       index=index+1
@@ -273,17 +305,17 @@ def create_doc(html_dir, list_of_companies)
     
     
     
-    company_html = rank.to_s+'. '+company[0]+' - Total score: '+company[1][:sa_score].to_s
+    company_html = rank.to_s+'. '+company[0]+' - Total score: '+company[1][:sa_score].round(2).to_s
 
     
     
     company_details << '<div class="panel panel-default">
       <div class="panel-heading">
 	<h4 class="panel-title">
-	  <a data-toggle="collapse" data-parent="#accordion" href="#'+company[0]+'"><b>'+company_html+'</b></a>
+	  <a data-toggle="collapse" data-parent="#accordion" href="#'+html_happy(company[0])+'"><b>'+company_html+'</b></a>
 	</h4>
       </div>
-      <div id="'+company[0]+'" class="panel-collapse collapse">
+      <div id="'+html_happy(company[0])+'" class="panel-collapse collapse">
 	<div class="panel-body">'+article_html+'</div>
       </div>
     </div>'
@@ -294,10 +326,13 @@ def create_doc(html_dir, list_of_companies)
   
   #fill variables into our html file
   html_file = html_file.sub('ziwayo{pie}',pietable)
-  html_file = html_file.sub('ziwayo{all_companies}',all_companies)
+  html_file = html_file.sub('ziwayo{all_companies}',array_of_companies.join(", "))
   html_file = html_file.sub('ziwayo{all_articles}',articles)
   html_file = html_file.sub('ziwayo{company_details}',company_details)
   html_file = html_file.gsub('ziwayo{title}',$html_title)
+  html_file = html_file.sub('ziwayo{date}',Date.today.strftime)
+  
+  
   #output
   #puts html_file
   File.write(ARGV[3], html_file)
@@ -335,6 +370,10 @@ elsif ARGV[0] == 'download_html'
     puts oops
     help()
   else
+    #links_array = csv_to_array(ARGV[1]).uniq
+    #puts links_array.first
+    
+    
     links_array = csv_to_array(ARGV[1]).uniq
     down_html_from_links_open_uri(links_array, ARGV[2])
   end
@@ -353,9 +392,6 @@ else
   puts "you need to provide some arguments"
   help()
 end
-
-
-
 
 
 
