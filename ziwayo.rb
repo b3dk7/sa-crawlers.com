@@ -226,10 +226,12 @@ def create_doc(html_dir, list_of_companies)
     end
     
     File.open("last_result.hash", "w"){|to_file| Marshal.dump(results, to_file)}
+    File.write("last_articles.html", articles)
   else
     #results = save(data, path)
     results = File.open(ARGV[4], "r"){|from_file| Marshal.load(from_file)}
 	#YAML.load_file(ARGV[3])
+    articles = File.open("last_articles.html").read
   end
   
   
