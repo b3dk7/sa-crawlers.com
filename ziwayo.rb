@@ -282,6 +282,16 @@ def create_doc(html_dir, list_of_companies)
 	
 	
       end
+      
+      para_table << '<tr>
+	  <th><b>Average Points achieved</b></th>
+	  <th><b>'+article[:average_article_score].to_s+'</b></th>
+	</tr>'
+      
+      
+      
+      
+      
       para_table << '</table>'
       
       
@@ -289,7 +299,7 @@ def create_doc(html_dir, list_of_companies)
 	<div class="panel-heading panel-heading-custom">
 	  <h4 class="panel-title pink_blocks">
 	    <a data-toggle="collapse" data-parent="#accordion" href="#'+article_id.to_s+'">
-	      '+article[:article_title]+' ['+article[:average_article_score].to_s+' Points]
+	      '+article[:article_title]+' ['+article[:average_article_score].to_s+' Points on average]
 	    </a>
 	  </h4>
 	</div>
