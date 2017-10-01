@@ -1,9 +1,7 @@
 body {
-    background-color:#3686be;
-    
-    background-color:#c8c8c8;
-    color:#FFF;
-    color:black;
+
+    background-color:#4d4d4d;
+    color:white;
 }
 
 .bit-smaller {
@@ -17,3 +15,26 @@ body {
 .secrect-color{
   color:#c8c8c8;
 }
+
+
+
+
+ /* unvisited link */
+a:link {
+    color:#eaa7a7;
+}
+
+/* visited link */
+a:visited {
+    color:#eaa7a7;
+}
+
+/* mouse over link */
+a:hover {
+    color:#c0f49d;
+}
+
+/* selected link */
+a:active {
+    color:#eaa7a7;
+} 
