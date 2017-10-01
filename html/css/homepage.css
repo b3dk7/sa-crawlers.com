@@ -9,3 +9,11 @@ body {
 .bit-smaller {
     font-size: 80%;
 }
+
+.padding_foot {
+    padding-bottom: 10%;
+}
+
+.secrect-color{
+  color:#c8c8c8;
+}
