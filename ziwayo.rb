@@ -6,9 +6,11 @@ require 'json'
 require 'sentimental'
 require 'yaml'
 require 'date'
+require "selenium-webdriver"
+require 'timeout'
 
 oops = 'oops, you seem to be missing arguments'
-$html_title = 'Sentiment Analysis for the keyword "WannaCry"'
+$html_title = 'Sentiment Analysis of computer security companies mentioned in TheHackerNews.com'
 #$matrix = []
 #with_date d w m y
 
@@ -49,14 +51,11 @@ def build_search_url(search,date)
   
   #url = 'https://www.startpage.com/do/search?cmd=process_search&query='+search+'&language=english&cat=web&dgf=1&pl=&ff=&t=air'
   
-  #dgf=1 means you want as many searches as possible
+  #dgf=1 means you want as many results as possible
   
   url = 'https://www.startpage.com/do/search?query='+search+'&dgf=1'
   return url
 end
-
-
-
 
 def down_html_from_links_open_uri(links, dir_name)
   Dir.mkdir dir_name unless Dir.exist?(dir_name)
@@ -70,34 +69,23 @@ def down_html_from_links_open_uri(links, dir_name)
     File.write(dir_name+'/'+i.to_s+'.html', html_file)
     puts 'downloaded index'+i.to_s
     rescue
-      puts "problem with link "+link+" .. will try to download it later using Watir"
+      puts "problem with link "+link+" .. will try to download it later using wget"
       problem_links << [link, (dir_name+'/'+i.to_s+'.html')]
     end
   end
-  
-  
-  #now waitr kicks in
-  #b = Watir::Browser.new :chrome, :switches => %w[--ignore-certificate-errors --disable-popup-blocking --disable-translate --proxy-server=myproxy.com:8080]
-  
-  b = Watir::Browser.new :chrome
-  #b.driver.manage.timeouts.implicit_wait = 6
+  puts "----"
+  puts "dowloading previously failed links with wget"
   for i in 0...problem_links.length
     begin
-      Timeout::timeout(6) do
-	puts "downloading "+problem_links[i][1]
-	b.goto(problem_links[i][0])
-	html_file = "<!--"+link+"-->\n" + b.html
-	File.write(problem_links[i][1], html_file)
-      end
+      puts "using wget to download"+problem_links[i][1]
+      html_file = "<!--"+link+"-->\n" + `wget -qO- #{problem_links[i][0]} | cat`
+      File.write(problem_links[i][1], html_file)
     rescue
-      puts "not able to download: "+problem_links[i][0]
+      puts "we were not able to download "+ problem_links[i][0]
     end
   end
-  
-  
-  
-  
 end
+
 
 
 def get_p(doc)
@@ -108,6 +96,17 @@ def get_p(doc)
   end
   return extract
 end
+
+
+def get_text_from_thn(doc)
+  extract = []
+  doc.css('script').remove
+
+  extract << doc.css('div.articlebodyonly').text
+  return extract
+end
+
+
 
 def csv_to_array(csv)
   array = []
@@ -179,7 +178,12 @@ def create_doc(html_dir, list_of_companies)
 	title = raw_title.text
       end
       articles << '<a href='+link+'>'+title+'</a><br>'
-      paragraphs = get_p(article_noko)    
+      
+      paragraphs = get_text_from_thn(article_noko)    
+      #paragraphs = get_p(article_noko)  
+
+      
+      
       for i in 0 ... array_of_companies.size
 	company = array_of_companies[i]
 	#bias protection
